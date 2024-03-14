@@ -1,0 +1,62 @@
+body{
+    background-color: #F1DAD4;
+}
+.Routes{
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+    align-items: center;
+    height: 70px;
+}
+.CartBoxes{
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+    align-items: center;
+}
+.CartBoxes img{
+    width: 20px;
+}
+.Logo{
+    display: flex;
+    justify-content: space-around;
+    width: 20vw;
+    align-items: center;
+}
+.Logo img{
+    width: 70px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+
+}
+/*
+Footer.css
+*/
+.Itemsoptions{
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+}
+.Itemsoptions a{
+    text-decoration: none;
+    color: Black;
+
+
+}
+.Itemsoptions a:hover {
+    color: blueviolet;
+}
+.Footer{
+    display: flex;
+    justify-content: space-between;
+}
+.termsandconditions{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
