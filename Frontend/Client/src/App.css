@@ -7,6 +7,11 @@ body{
     width: 30vw;
     align-items: center;
     height: 70px;
+    /* color: black; */
+}
+.Routes h3{
+    text-decoration: none;
+    color: black;
 }
 .CartBoxes{
     display: flex;
