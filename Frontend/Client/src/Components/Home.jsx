@@ -1,10 +1,12 @@
 import React from 'react'
 import "./Home.css"
 import data from "./data.json"
-
+import Navbar from './Navbar'
+import Footer from './Footer'
 const Home = () => {
     return (
         <div>
+            {/* <Navbar/> */}
             <div className='body'>
                 <h1> Celebrate the fest With  Your tradition. </h1>
                 <button>Shop Now</button>
@@ -27,6 +29,7 @@ const Home = () => {
                 </div>
 
             </div>
+            <Footer/>
         </div>
     )
 }
