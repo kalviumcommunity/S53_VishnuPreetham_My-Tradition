@@ -2,8 +2,9 @@ const express=require("express")
 const app=express()
 const cors=require("cors")
 const router=require("./Routes")
+const databaseconnection=require("./db")
 require("dotenv").config()
-
+databaseconnection()
 /////Middlewares Config.
 
 app.use(express.json())
