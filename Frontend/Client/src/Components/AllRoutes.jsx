@@ -5,6 +5,7 @@ import About from './About'
 import Profile from '../ComponentsLogin/Profile'
 import Cart from './UserData/Cart'
 import Contact from './Contact'
+import States from './StatesLink/States'
 
 const AllRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AllRoutes = () => {
         <Route path='profile_user' element={<Profile/>}/>
         <Route path='user_cart' element={<Cart/>}/>
         <Route path='contact_company' element={<Contact/>}/>
+        <Route path='States' element={<States/>}/>
       </Routes>
     </div>
   )

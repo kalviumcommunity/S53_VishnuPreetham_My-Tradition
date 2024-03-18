@@ -3,13 +3,14 @@ import "./Home.css"
 import data from "./data.json"
 import Navbar from './Navbar'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 const Home = () => {
     return (
         <div>
             {/* <Navbar/> */}
             <div className='body'>
                 <h1> Celebrate the fest With  Your tradition. </h1>
-                <button>Shop Now</button>
+               <Link to={"states"}> <button>Shop Now</button></Link>
             </div>
             <div>
                 <div className="BodyFooter">
