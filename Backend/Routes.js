@@ -1,13 +1,19 @@
 const express=require("express")
 const router=express.Router()
-router.get("/getdata",async(req,res)=>{
+const { State } = require('./Schemas/Productdata');
+router.get('/getdata', async (req, res) => {
     try {
-        res.send("Hello Data Got sucess Fully")
-        
+        const data = await State.find().populate({
+            path: 'events.traditions.images',
+            model: 'Image'
+        });
+        res.json(data);
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).send("Internal Server Error");
     }
-})
+});
+
 router.post("/postdata",async(req,res)=>{
     try {
         res.send("Hello Data Posted sucesss Fully")
