@@ -1,10 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import "./states.css";
 import statesdata from "./statesdata.json";
+import productdata from "./Productdata.json"
+import { Link } from 'react-router-dom';
+import { AppContext } from '../../Context/ParentContext';
 
 const States = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
-
+    const { newdata, setNewData } = useContext(AppContext);
+    const setdata = (statename) => {
+        const settingdata = productdata.states[statename];
+        setNewData(settingdata);
+        console.log(settingdata);
+    }
     const exploreHover = (index) => {
         setHoveredIndex(index);
     }
@@ -33,10 +41,12 @@ const States = () => {
                         }}
                     >
                         {hoveredIndex === index && (
-                            <div className="explorebutton">
+                            <Link to='products'>
+                            <div className="explorebutton" onClick={() => { setdata(item.state) }}>
                                 <h3>Explore</h3>
                                 <img width={"20px"} src="https://cdn-icons-png.flaticon.com/128/54/54366.png" alt="" />
                             </div>
+                           </Link>
                         )}
                         <h4>{item.state}</h4>
                     </div>
