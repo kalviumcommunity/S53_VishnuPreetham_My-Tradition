@@ -64,20 +64,48 @@ router.post("/createUser", async (req, res) => {
 router.patch('/userAddingCart/:userEmail', async (req, res) => {
     const Email = req.params.userEmail;
     const ProductDetails = req.body;
-
     try {
         const user = await User.findOne({ email: Email }); 
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
-        user.SavedProd.push(ProductDetails);
-        const updatedUser = await user.save();
-        res.status(200).json({ message: 'Saved array updated successfully', user: updatedUser });
+        const isAdded = user.SavedProd.some(product => product.imgDescription === ProductDetails.imgDescription);
+        if (isAdded) {
+            return res.status(200).json({ message: 'Product already added' });
+        } else {
+            user.SavedProd.push(ProductDetails);
+            const updatedUser = await user.save();
+            res.status(200).json({ message: 'Saved array updated successfully', user: updatedUser });
+        }
     } catch (error) {
         console.error('Error updating user document:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
 });
+//Removing from the cart;
+router.delete('/deletingproductfromcart/:userEmail', async (req, res) => {
+    const Email=req.params.userEmail;
+    const ProductDetails = req.body;
+    try {
+        const user = await User.findOne({ email: Email }); 
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        const productIndex = user.SavedProd.findIndex(product => product.imgDescription === ProductDetails.imgDescription);
+        if (productIndex!=-1) {
+            user.SavedProd.splice(productIndex,1);
+            const updatedUser = await user.save();
+            res.status(200).json({ message: 'Saved array updated successfully', user: updatedUser });
+        }else{
+            res.send({Message:"this product alredy deleted"})
+        }
+    } catch (error) {
+        console.error('Error updating user document:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+
 
 
 module.exports = router
