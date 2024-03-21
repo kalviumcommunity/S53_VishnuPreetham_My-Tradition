@@ -1,11 +1,5 @@
-import './App.css'
-import Footer from './Components/Footer'
-import Home from './Components/Home'
-import Navbar from './Components/Navbar'
-import LoginButton from './ComponentsLogin/LoginButton'
-import LogoutButton from './ComponentsLogin/LogoutButton'
-import Profile from './ComponentsLogin/Profile'
-import AllRoutes from './Components/AllRoutes'
+import AllRoutes from './Components/Mainpages/AllRoutes'
+import Navbar from './Components/Mainpages/Navbar';
 function App() {
   return (
     <>

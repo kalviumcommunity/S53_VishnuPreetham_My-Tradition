@@ -1,74 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Cedarville+Cursive&family=Irish+Grover&family=Poppins:wght@300&family=Roboto&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
 
-.Routes{
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.top_quote {
+    padding: 15px 15px;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+.Routes {
     display: flex;
     justify-content: space-around;
     width: 30vw;
     align-items: center;
     height: 50px;
-        /* color: black; */
+    /* color: black; */
 }
-.Logo h3{
+
+.Logo h3 {
     font-family: "Amita";
 }
-.Routes h3{
+
+.Routes h3 {
     text-decoration: none;
     color: black;
 }
-.CartBoxes{
+
+.CartBoxes {
     display: flex;
     gap: 25px;
-    width: 10vw;
+    width: 20vw;
     align-items: center;
     height: 50px;
 
 }
-.CartBoxes img{
+
+.CartBoxes p {
+    border: 2px solid #F5DDB0;
+    color: #F5DDB0;
+    padding: 10px 10px;
+    width: 40%;
+    text-align: center;
+}
+
+.CartBoxes img {
     width: 20px;
 }
-.Logo{
+
+.Logo {
     display: flex;
     gap: 10px;
     width: 20vw;
     align-items: center;
-    color: rgb(208, 48, 75);
+    color: wheat;
 }
-.Logo img{
-    width: 45px;
-    margin-top: -5px;
+
+.Logo img {
+    width: 75px;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
-    /* border: 2px solid black; */
-
+    background-color: #A21434;
+    width: 98.9vw;
+    height: 5vw;
 }
+
 /*
 Footer.css
 */
-.Itemsoptions{
+.Itemsoptions {
     display: flex;
     flex-direction: column;
     height: 150px;
     justify-content: space-between;
 }
-.Itemsoptions a{
+
+.Itemsoptions a {
     text-decoration: none;
     color: Black;
 
 
 }
+
 .Itemsoptions a:hover {
     color: blueviolet;
 }
-.Footer{
+
+.Footer {
     display: flex;
     justify-content: space-between;
 }
-.termsandconditions{
+
+.termsandconditions {
     display: flex;
     justify-content: space-around;
     margin-top: 2%;

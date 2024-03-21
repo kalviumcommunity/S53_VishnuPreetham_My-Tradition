@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Cedarville+Cursive&family=Irish+Grover&family=Poppins:wght@300&family=Roboto&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 .body {
     background-image: url(https://images.pexels.com/photos/1229414/pexels-photo-1229414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     background-repeat: no-repeat;
     height: 100vh;
-    /* background-size: 100vw 100vh; */
     background-size: cover;
-    margin-top: -20px    
 }
-
 .body h1 {
     width: 25%;
     text-align: center;
@@ -111,3 +110,66 @@
 .card:hover {
     transform: scale(1.1);
 }
+.advertisementcard1{
+  background-image: url(https://img.freepik.com/premium-vector/powder-pastel-background-theme_23-2148600635.jpg?w=740);
+  border: 2px solid white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  width: 70vw;
+  height: 80vh;
+  color: black;
+
+  align-items: center;
+  gap: 40px;
+  margin: auto;
+}
+.advertisementcard2{
+  background-image: url(FipledImg.png);
+  border: 2px solid white;
+  display: flex;
+  width: 48vw;
+  height: 90vh;
+  color: black;
+  font-family: "Cinzel", serif;
+  align-items: center;
+  /* gap: 10px; */
+}
+.p1{
+  font-size: 30px;
+  padding: 10px 10px ;
+  width: 100%;
+  font-family: "Cinzel", serif;
+}
+.advertisementcard1 img{
+  height: 100%;
+  object-fit: cover;
+}
+.advertismentcards{
+  margin-top: 20px;
+}
+.p2{
+  font-family: "Roboto Flex", sans-serif;
+  color: #555252;
+  padding: 10px 10px;
+  margin-top: 30px;
+}
+.para{
+  position: relative;
+  left: 2%;
+}
+.para button{
+  text-align: center;
+  border: 1px solid white;
+  background-color: white;
+  padding: 15px 15px;
+  font-family: "Cinzel", serif;
+  width: 30%;
+  font-weight: 600;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Horizontal offset, vertical offset, blur radius, color and transparency */
+  z-index: -1;
+  margin-left: 25%;
+  margin-top: 4%;
+  cursor: pointer;
+}
+
