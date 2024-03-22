@@ -20,9 +20,15 @@ const Home = () => {
                 </div>
                 <div className="advertisementcard2">
                     <img src={botoomLogo} alt="Addvertisement Logo" />
-                    <p>
-                        WORRIED ABOUT PURE PATTU ,LET'S CELEBRATE THE FEST WITH KANCHIPATTU.
-                    </p>
+                    <div className="parabottom">
+                        <p className='p1bottom'>
+                     BOTHERING ABOUT BANARAS,HERE IS BEST BANARAS FOR YOU
+                        </p>
+                        <p className='p2bottom'>"Elegance woven into every thread. Experience timeless beauty with Banaras sarees. Embrace tradition, exude sophistication."</p>
+                        <button>
+                            Let's Beautify
+                        </button>
+                    </div>
                 </div>
             </div>
             {/* <div className='body'>

@@ -126,14 +126,16 @@
 }
 .advertisementcard2{
   background-image: url(FipledImg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   border: 2px solid white;
   display: flex;
-  width: 48vw;
-  height: 90vh;
+  width: 70vw;
+  height: 80vh;
   color: black;
-  font-family: "Cinzel", serif;
   align-items: center;
-  /* gap: 10px; */
+  gap: 40px;
+  margin: auto;
 }
 .p1{
   font-size: 30px;
@@ -141,7 +143,7 @@
   width: 100%;
   font-family: "Cinzel", serif;
 }
-.advertisementcard1 img{
+.advertisementcard1,.advertisementcard2 img{
   height: 100%;
   object-fit: cover;
 }
@@ -166,10 +168,34 @@
   font-family: "Cinzel", serif;
   width: 30%;
   font-weight: 600;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); /* Horizontal offset, vertical offset, blur radius, color and transparency */
-  z-index: -1;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); 
   margin-left: 25%;
   margin-top: 4%;
   cursor: pointer;
 }
+.p2bottom{
+  font-family: "Roboto Flex", sans-serif;
+  color: #555252;
+  padding: 10px 10px;
+  margin-top: 30px;
+}
 
+.parabottom button{
+  text-align: center;
+  border: 1px solid white;
+  background-color: white;
+  padding: 15px 15px;
+  font-family: "Cinzel", serif;
+  width: 30%;
+  font-weight: 600;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); 
+  margin-left: 25%;
+  margin-top: 4%;
+  cursor: pointer;
+}
+.p1bottom{
+  font-size: 30px;
+  padding: 10px 10px;
+  width: 100%;
+  font-family: "Cinzel", serif;
+}
