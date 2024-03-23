@@ -3,6 +3,7 @@ const app=express()
 const cors=require("cors")
 const router=require("./Routes")
 const databaseconnection=require("./db")
+const razorrouter=require("./RazorPay/razorroutes")
 require("dotenv").config()
 databaseconnection()
 /////Middlewares Config.
@@ -10,6 +11,7 @@ databaseconnection()
 app.use(express.json())
 app.use(cors())
 app.use(router)
+app.use(razorrouter)
 
 ///////Creating the Routes
 PORT=process.env.PORT
