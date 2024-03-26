@@ -7,7 +7,7 @@ const Payment =require("./razorpayschema");
 require("dotenv").config();
 
 const instance = new razorpay({
-    key_id:process.env.KEY,
+    key_id:process.env.kEY,
     key_secret:process.env.SECRET,
 })
 
