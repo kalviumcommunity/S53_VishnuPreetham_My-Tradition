@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Cedarville+Cursive&family=Irish+Grover&family=Poppins:wght@300&family=Roboto&family=Tilt+Prism&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
-.body {
-    background-image: url(https://images.pexels.com/photos/1229414/pexels-photo-1229414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+  /* overflow: hidden; */
 }
 .body h1 {
     width: 25%;
@@ -16,7 +14,7 @@
     font-weight: bolder;
     font-family: cursive;
     font-family: "amita";
-    color: wheat;
+    color: white;
 }
 
 .body button {
@@ -44,72 +42,7 @@
     text-align: center;
 }
 
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;  
-    justify-content: space-around;
-    gap: 40px;
-}
-.card {
-    border: 4px solid #eaeaea;
-    border-radius: 8px;
-    width: 250px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 450px;
-    transition: transform 0.3s ease-out;
-    position: relative; 
-  }
-  
-  .saree-image {
-    width: 100%;
-    height: 70%;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-  }
-  
-  .card h4 {
-    padding: 10px;
-    margin: 0;
-  }
-  
-  .explore {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: absolute; 
-    bottom: 0;
-    width: 94%;
-    background-color: white;
-    backdrop-filter: blur(60px);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  
-  
-  .explore img {
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-    /* animation: exploreAnimation 3s infinite alternate; */
-  }
-  
-  /* @keyframes exploreAnimation {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(100px, 0); 
-    }
-  } */
-  
-  
- 
-.card:hover {
-    transform: scale(1.1);
-}
+
 .advertisementcard1{
   background-image: url(https://img.freepik.com/premium-vector/powder-pastel-background-theme_23-2148600635.jpg?w=740);
   border: 2px solid white;
@@ -199,3 +132,45 @@
   width: 100%;
   font-family: "Cinzel", serif;
 }
+.mid_home{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+  position: relative;   
+  top: 40px;
+}
+.Mid_home_products {
+  display: flex;
+  overflow-x: scroll; 
+  scroll-snap-type: x mandatory;
+  gap: 40px; 
+  margin-top: 50px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  flex: 0 0 auto; 
+  scroll-snap-align: start;
+ 
+}
+
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card-description {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
