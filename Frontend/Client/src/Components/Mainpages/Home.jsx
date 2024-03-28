@@ -4,11 +4,13 @@ import topLogo from "./Sareeiewithoutbackground.png"
 import botoomLogo from "./Advertisement2.png"
 import img2 from "./img2.jpg"
 import { Link } from "react-router-dom";
-import data from "./data.json"
+import data from "../Data/data.json"
+import cataforydata from "../Data/catagory.json"
+import offer from "../Data/offer.json"
 const Home = () => {
     return (
         <div>
-            
+
             <div className='body' style={{
                 backgroundImage: `url(${img2})`,
                 backgroundRepeat: "no-repeat",
@@ -22,8 +24,8 @@ const Home = () => {
                 <h1> Celebrate the fest With  Your tradition. </h1>
                 <Link to={"states"}> <button>Shop Now</button></Link>
             </div>
-           
-            
+
+
             <div>
 
             </div>
@@ -62,6 +64,32 @@ const Home = () => {
                         <img src={product.image || product.image_url} alt={product.description} />
                         <div className="card-description">{product.description}</div>
                     </div>
+                ))}
+            </div>
+            <div className="mid_advirtisement">
+                <p>Cool Offers Cult Discounts </p>
+            </div>
+            <div className="prod_advertisement">
+                {offer.map((e, i) => (
+                    <>
+                        <div className="adv_prod">
+                            <img src={e.image} alt="" />
+                            <div className='Catagory'><img src={e.brandimg} alt="" />{e.catagory} </div>
+                            <p className='Discount'>{e.Discount}</p>
+                        </div></>
+                ))}
+            </div>
+            <div className='Products_persons'>
+                <p>Our Trends</p>
+            </div>
+            <div className="products_catagory">
+                {cataforydata.map((e, i) => (
+                    <>
+                        <div className="cat_prod">
+                            <img src={e.image} alt="" />
+                            <p className="categoryText">{e.catagory}</p>
+                        </div>
+                    </>
                 ))}
             </div>
         </div>

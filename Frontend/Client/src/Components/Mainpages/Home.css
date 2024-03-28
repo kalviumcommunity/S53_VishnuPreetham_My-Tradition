@@ -2,48 +2,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
   /* overflow: hidden; */
 }
+
 .body h1 {
-    width: 25%;
-    text-align: center;
-    position: relative;
-    left: 73%;
-    top: 50%;
-    font-weight: bolder;
-    font-family: cursive;
-    font-family: "amita";
-    color: white;
+  width: 25%;
+  text-align: center;
+  position: relative;
+  left: 73%;
+  top: 50%;
+  font-weight: bolder;
+  font-family: cursive;
+  font-family: "amita";
+  color: white;
 }
 
 .body button {
-    position: relative;
-    left: 78%;
-    top: 50%;
-    font-weight: bolder;
-    font-family: cursive;
-    border: 2px solid white;
-    color: white;
-    background-color: transparent;
-    backdrop-filter: blur(60px);
-    padding: 10px 10px;
-    width: 150px;
-    transition: transform 0.3s ease-out;
-    cursor: pointer;
+  position: relative;
+  left: 78%;
+  top: 50%;
+  font-weight: bolder;
+  font-family: cursive;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  backdrop-filter: blur(60px);
+  padding: 10px 10px;
+  width: 150px;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
 
 }
 
 .body button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .BodyFooter {
-    text-align: center;
+  text-align: center;
 }
 
 
-.advertisementcard1{
+.advertisementcard1 {
   background-image: url(https://img.freepik.com/premium-vector/powder-pastel-background-theme_23-2148600635.jpg?w=740);
   border: 2px solid white;
   background-repeat: no-repeat;
@@ -57,7 +60,8 @@ body{
   gap: 40px;
   margin: auto;
 }
-.advertisementcard2{
+
+.advertisementcard2 {
   background-image: url(FipledImg.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -70,50 +74,37 @@ body{
   gap: 40px;
   margin: auto;
 }
-.p1{
+
+.p1 {
   font-size: 30px;
-  padding: 10px 10px ;
+  padding: 10px 10px;
   width: 100%;
   font-family: "Cinzel", serif;
 }
-.advertisementcard1,.advertisementcard2 img{
+
+.advertisementcard1,
+.advertisementcard2 img {
   height: 100%;
   object-fit: cover;
 }
-.advertismentcards{
+
+.advertismentcards {
   margin-top: 20px;
 }
-.p2{
-  font-family: "Roboto Flex", sans-serif;
-  color: #555252;
-  padding: 10px 10px;
-  margin-top: 30px;
-}
-.para{
-  position: relative;
-  left: 2%;
-}
-.para button{
-  text-align: center;
-  border: 1px solid white;
-  background-color: white;
-  padding: 15px 15px;
-  font-family: "Cinzel", serif;
-  width: 30%;
-  font-weight: 600;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); 
-  margin-left: 25%;
-  margin-top: 4%;
-  cursor: pointer;
-}
-.p2bottom{
+
+.p2 {
   font-family: "Roboto Flex", sans-serif;
   color: #555252;
   padding: 10px 10px;
   margin-top: 30px;
 }
 
-.parabottom button{
+.para {
+  position: relative;
+  left: 2%;
+}
+
+.para button {
   text-align: center;
   border: 1px solid white;
   background-color: white;
@@ -121,31 +112,55 @@ body{
   font-family: "Cinzel", serif;
   width: 30%;
   font-weight: 600;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
   margin-left: 25%;
   margin-top: 4%;
   cursor: pointer;
 }
-.p1bottom{
+
+.p2bottom {
+  font-family: "Roboto Flex", sans-serif;
+  color: #555252;
+  padding: 10px 10px;
+  margin-top: 30px;
+}
+
+.parabottom button {
+  text-align: center;
+  border: 1px solid white;
+  background-color: white;
+  padding: 15px 15px;
+  font-family: "Cinzel", serif;
+  width: 30%;
+  font-weight: 600;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3);
+  margin-left: 25%;
+  margin-top: 4%;
+  cursor: pointer;
+}
+
+.p1bottom {
   font-size: 30px;
   padding: 10px 10px;
   width: 100%;
   font-family: "Cinzel", serif;
 }
-.mid_home{
+
+.mid_home {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
   font-style: normal;
   font-size: 40px;
   text-align: center;
-  position: relative;   
+  position: relative;
   top: 40px;
 }
+
 .Mid_home_products {
   display: flex;
-  overflow-x: scroll; 
+  overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  gap: 40px; 
+  gap: 40px;
   margin-top: 50px;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -157,9 +172,10 @@ body{
   margin: 10px;
   padding: 10px;
   width: 300px;
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
   scroll-snap-align: start;
- 
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
 }
 
 
@@ -172,5 +188,139 @@ body{
 .card-description {
   margin-top: 10px;
   font-size: 14px;
+}
+
+.Products_persons {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  top: 40px;
+}
+
+.products_catagory {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 40px;
+  margin-top: 50px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.products_catagory img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cat_prod {
+  position: relative;
+  cursor: pointer;
+}
+
+.categoryText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 5px;
+  margin: 0;
+  display: none;
+  transition: visibility 0.3s ease-in-out;
+}
+
+.cat_prod:hover .categoryText {
+  display: block;
+}
+.mid_advirtisement{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  top: 40px;
+}
+.prod_advertisement{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  min-height: 150vh;
+  background-color: rgb(240, 230, 212);
+  gap: 40px;
+  margin: auto;
+  margin-top: 3%;
+  padding: 10px 10px;
+}
+.adv_prod img {
+  width: 500px;
+  object-fit: cover;
+  height: 500px;
+  border-radius: 30px;
+}
+.adv_prod {
+  position: relative;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.adv_prod .Catagory {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  padding: 5px;
+  margin: 0;
+  display: none;
+  transition: visibility 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+}
+.adv_prod .Discount {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  padding: 5px;
+  margin: 0;
+  display: none;
+  transition: visibility 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+}
+
+.adv_prod:hover .Catagory {
+  display: block;
+}
+.adv_prod:hover .Discount {
+  display: block;
+}
+.Catagory{
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+  width: 60%; 
+  text-align: center;
+}
+.Catagory img{
+  width: 40px;
+  height: 40px;
 }
 
