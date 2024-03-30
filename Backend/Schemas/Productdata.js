@@ -25,9 +25,24 @@ const stateSchema = new Schema({
     }]
 });
 
+const catogory = new mongoose.Schema({
+  image: {
+    type: String,
+    required: true
+  },
+  category: {
+    type: String,
+    required: true
+  }
+});
+
+
+const catogarymodel = mongoose.model('catagory', catogory);
+
+
 
 const Image = mongoose.model('Image', imageSchema);
 const Event = mongoose.model('Event', eventSchema);
 const State = mongoose.model('State', stateSchema);
 
-module.exports = { Image, Event, State };
+module.exports = { Image, Event, State,catogarymodel };
