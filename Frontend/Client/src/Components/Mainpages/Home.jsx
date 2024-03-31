@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import data from "../Data/data.json"
 import cataforydata from "../Data/catagory.json"
 import offer from "../Data/offer.json"
+import moderndata from "../Data/HomeProducts.json"
 const Home = () => {
     return (
         <div>
@@ -92,6 +93,25 @@ const Home = () => {
                     </>
                 ))}
             </div>
+            <div className='Products_persons'>
+                <p>Modern Magics</p>
+            </div>
+            <div className="Modern_Products">
+                {moderndata.map((e, i) => (
+                    <>
+                        <div className="Products">
+                            <img src={e.img} alt="" />
+                            <div className="Overlay">
+
+                            <p className="MPDescription">{e.description}</p>
+                            <p className="MPDiscount">{e.discount}</p>
+                            <button>Shop Now</button>
+                            </div>
+                        </div>
+                    </>
+                ))}
+            </div>
+
         </div>
     )
 }
