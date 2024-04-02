@@ -2,28 +2,6 @@ const express = require("express")
 
 const router = express.Router()
 const { User, userDelivaryAddress } = require("./Schemas/UserSchema")
-const { State ,catogarymodel} = require('./Schemas/Productdata');
-router.get('/getdata', async (req, res) => {
-    try {
-        const data = await State.find().populate({
-            path: 'events.traditions.images',
-            model: 'Image'
-        });
-        res.json(data);
-    } catch (error) {
-        console.log(error);
-        res.status(500).send("Internal Server Error");
-    }
-});
-router.get('/categories', async (req, res) => {
-    try {
-        const categories = await catogarymodel.find();
-        res.json(categories);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: "Internal Server Error" });
-    }
-});
 
 
 router.post("/postdata", async (req, res) => {
