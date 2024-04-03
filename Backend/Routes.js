@@ -2,7 +2,7 @@ const express = require("express")
 
 const router = express.Router()
 const { User, userDelivaryAddress } = require("./Schemas/UserSchema")
-
+router.use(express.json())
 
 router.post("/postdata", async (req, res) => {
     try {
@@ -49,20 +49,17 @@ router.post("/createUser", async (req, res) => {
 });
 
 ////Saving the Array from the wish lists;
-router.patch('/userAddingWishlist/:userEmail', async (req, res) => {
+router.post("/addtocart/:userEmail/", async (req, res) => {
     const Email = req.params.userEmail;
     const ProductDetails = req.body;
+    console.log(ProductDetails)
     try {
-        const user = await User.findOne({ email: Email }); 
+        const user = await User.findOne({ email: Email });
         if (!user) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-        const isAdded = user.SavedProd.some(product => product.imgDescription === ProductDetails.imgDescription);
-        if (isAdded) {
-            return res.status(200).json({ message: 'Product already added' });
+            return res.status(404).json({ message: 'User Not Found' });
         } else {
             user.SavedProd.push(ProductDetails);
-            const updatedUser = await user.save();
+            const updatedUser = await user.save(); 
             res.status(200).json({ message: 'Saved array updated successfully', user: updatedUser });
         }
     } catch (error) {
@@ -70,75 +67,30 @@ router.patch('/userAddingWishlist/:userEmail', async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 });
+
 //Removing the Elements firm the wishlist;
-router.delete('/deletingproductfromwishlist/:userEmail', async (req, res) => {
+router.delete('/deletingproductfromwishlist/:userEmail/:id', async (req, res) => {
     const Email=req.params.userEmail;
-    const ProductDetails = req.body;
+    const id=req.params.id;
+    
     try {
         const user = await User.findOne({ email: Email }); 
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
-        const productIndex = user.SavedProd.findIndex(product => product.imgDescription === ProductDetails.imgDescription);
-        if (productIndex!=-1) {
-            user.SavedProd.splice(productIndex,1);
+        else{
+            const Product = await user.SavedProd.findIndex(product => product._id === id);
+            if (Product!=-1) {
+            user.SavedProd.splice(Product,1);
             const updatedUser = await user.save();
             res.status(200).json({ message: 'Saved array updated successfully', user: updatedUser });
-        }else{
-            res.send({Message:"this product already deleted"})
+            }else{
+                res.send({Message:"this product already deleted"})
+            }     
         }
     } catch (error) {
         console.error('Error updating user document:', error);
         res.status(500).json({ message: 'Internal server error' });
     }
 });
-
-
-
-///////////Adding the items to the Cart;
-router.patch('/userAddingCart/:userEmail', async (req, res) => {
-    const Email = req.params.userEmail;
-    const ProductDetails = req.body;
-    try {
-        const user = await User.findOne({ email: Email }); 
-        if (!user) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-        const isAdded = user.AddToCart.some(product => product.imgDescription === ProductDetails.imgDescription);
-        if (isAdded) {
-            return res.status(200).json({ message: 'Product already added' });
-        } else {
-            user.AddToCart.push(ProductDetails);
-            const updatedUser = await user.save();
-            res.status(200).json({ message: 'Saved array updated successfully', user: updatedUser });
-        }
-    } catch (error) {
-        console.error('Error updating user document:', error);
-        res.status(500).json({ message: 'Internal server error' });
-    }
-});
-//Deleting the Cart;
-router.delete('/deletingproductfromcart/:userEmail', async (req, res) => {
-    const Email=req.params.userEmail;
-    const ProductDetails = req.body;
-    try {
-        const user = await User.findOne({ email: Email }); 
-        if (!user) {
-            return res.status(404).json({ message: 'User not found' });
-        }
-        const productIndex = user.AddToCart.findIndex(product => product.imgDescription === ProductDetails.imgDescription);
-        if (productIndex!=-1) {
-            user.AddToCart.splice(productIndex,1);
-            const updatedUser = await user.save();
-            res.status(200).json({ message: 'Saved array updated successfully', user: updatedUser });
-        }else{
-            res.send({Message:"this product already deleted"})
-        }
-    } catch (error) {
-        console.error('Error updating user document:', error);
-        res.status(500).json({ message: 'Internal server error' });
-    }
-});
-
-
 module.exports = router
