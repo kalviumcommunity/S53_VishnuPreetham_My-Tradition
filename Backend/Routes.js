@@ -93,4 +93,49 @@ router.delete('/deletingproductfromwishlist/:userEmail/:id', async (req, res) =>
         res.status(500).json({ message: 'Internal server error' });
     }
 });
+////Adding to Cart the Array from the wish lists;
+router.post("/addtocart/:userEmail/", async (req, res) => {
+    const Email = req.params.userEmail;
+    const ProductDetails = req.body;
+    console.log(ProductDetails)
+    try {
+        const user = await User.findOne({ email: Email });
+        if (!user) {
+            return res.status(404).json({ message: 'User Not Found' });
+        } else {
+            user.AddToCart.push(ProductDetails);
+            const updatedUser = await user.save(); 
+            res.status(200).json({ message: 'Saved array updated successfully', user: updatedUser });
+        }
+    } catch (error) {
+        console.error('Error updating user document:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
+
+//Removing the Elements firm the wishlist;
+router.delete('/Removecart/:userEmail/:id', async (req, res) => {
+    const Email=req.params.userEmail;
+    const id=req.params.id;
+    
+    try {
+        const user = await User.findOne({ email: Email }); 
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+        else{
+            const Product = await user.AddToCart.findIndex(product => product._id === id);
+            if (Product!=-1) {
+            user.AddToCart.splice(Product,1);
+            const updatedUser = await user.save();
+            res.status(200).json({ message: 'Saved array updated successfully', user: updatedUser });
+            }else{
+                res.send({Message:"this product already deleted"})
+            }     
+        }
+    } catch (error) {
+        console.error('Error updating user document:', error);
+        res.status(500).json({ message: 'Internal server error' });
+    }
+});
 module.exports = router
