@@ -33,7 +33,10 @@ const userSchema=mongoose.Schema({
     Location:{
         type:String
     },
-    DelivaryAddress:[userDelivaryAddress],
+    DelivaryAddress:{
+        type:Array,
+        default:[]
+    },
     AddToCart:{
         type:Array,
         default:[]
