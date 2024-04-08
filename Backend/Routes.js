@@ -1,5 +1,5 @@
 const express = require("express")
-
+const Joi =require("joi")
 const router = express.Router()
 const { User, UserDeliveryAddressM } = require("./Schemas/UserSchema")
 router.use(express.json())
@@ -145,16 +145,23 @@ router.post("/address/:userEmail", async (req, res) => {
     const Address = req.body;
 
     try {
-        const user = await User.findOne({ email: userEmail });
-        if (!user) {
-            return res.status(404).json({ message: 'User Not Found' });
+        const { error } = userDeliveryAddressValidationSchema.validate(Address); 
+        if (error) {
+          return res.json({ success: false, Message: error.details[0].message });
         }
-        
-        const newAddress = new UserDeliveryAddressM(Address); // Create a new instance of UserDeliveryAddressM model
-        user.DelivaryAddress.push(newAddress); // Push the new address to the DelivaryAddress array
-
-        await user.save(); // Save the updated user document
-        res.status(200).json({ message: 'Delivery address added successfully', user: user });
+        else{
+            const user = await User.findOne({ email: userEmail });
+            if (!user) {
+                return res.status(404).json({ message: 'User Not Found' });
+            }
+            
+            const newAddress = new UserDeliveryAddressM(Address);
+            user.DelivaryAddress.push(newAddress); 
+    
+            await user.save();
+            res.status(200).json({ message: 'Delivery address added successfully', user: user });
+        }
+       
     } catch (error) {
         console.error('Error updating user document:', error);
         res.status(500).json({ message: 'Internal server error' });
@@ -162,4 +169,19 @@ router.post("/address/:userEmail", async (req, res) => {
 });
 
 
+
+
+
+
+
+/// Joi Validation for the UserDelivaryAddress
+const userDeliveryAddressValidationSchema = Joi.object({
+    Pincode: Joi.string().length(6).required(),
+    City: Joi.string().required(),
+    HomeAddress: Joi.string().required(),
+    District: Joi.string().required(),
+    Phone: Joi.string().length(10).required(),
+    LandMark: Joi.string().required(),
+    State: Joi.string().required()
+});
 module.exports = router
