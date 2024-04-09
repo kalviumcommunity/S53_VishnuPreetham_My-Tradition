@@ -1,12 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Cedarville+Cursive&family=Irish+Grover&family=Poppins:wght@300&family=Roboto&family=Tilt+Prism&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.Routes {
+    display: flex;
+    justify-content: space-around;
+    width: 30vw;
+    align-items: center;
+    height: 50px;
+}
+
+.mainnav {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #A21434;
+    width: 100%;
+    height: 5vw;
+    position: fixed;
+    z-index: 999;
+}
+
+.GenderType {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-around;
 }
 
 .top_quote {
@@ -16,67 +54,51 @@
     font-weight: 400;
     font-style: normal;
     text-align: center;
+    background-color: white;
+    width: 100vw;
 }
 
-.Routes {
-    display: flex;
-    justify-content: space-around;
-    width: 30vw;
-    align-items: center;
-    height: 50px;
-    /* color: black; */
-}
-
-.Logo h3 {
-    font-family: "Amita";
-}
-
-.Routes h3 {
-    text-decoration: none;
-    color: black;
-}
-
-.CartBoxes {
-    display: flex;
-    gap: 25px;
-    width: 20vw;
-    align-items: center;
-    height: 50px;
-
-}
-
-.CartBoxes p {
-    border: 2px solid #F5DDB0;
-    color: #F5DDB0;
-    padding: 10px 10px;
-    width: 40%;
+.GenderType p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    color: rgb(238, 208, 153);
+    padding: 10px;
+    width: 30%;
     text-align: center;
 }
 
-.CartBoxes img {
-    width: 20px;
+.GenderType p:hover {
+    background-color: antiquewhite;
 }
 
+/* Logo Section */
 .Logo {
     display: flex;
-    gap: 10px;
-    width: 20vw;
+    flex-direction: column;
     align-items: center;
-    color: wheat;
+    justify-content: center;
 }
 
 .Logo img {
-    width: 75px;
+    width: 90px;
 }
 
-.navbar {
+.Logo p {
+    font-family: "Amita", cursive;
+    font-size: 15px;
+    color: #E4BB51;
+    margin-top: -17px;
+}
+
+/* Cart Boxes */
+.CartBoxes {
     display: flex;
-    justify-content: space-between;
+    width: 12%;
     align-items: center;
-    height: 50px;
-    background-color: #A21434;
-    width: 98.9vw;
-    height: 5vw;
+    gap: 20px;
+    height: 100%;
 }
 
 /*
@@ -149,4 +171,135 @@ Footer.css
 
 .footer__bottom ul li:last-child {
     margin-right: 0;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin-top: 18.6vh;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 75vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.slide-content {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    font-size: 30px;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive */
+@media screen and (max-width: 400px) {
+    .navbar .GenderType {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+        background-color: #A21434;
+        padding: 5px;
+    }
+    .navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #A21434;
+    width: 100%;
+    height: 9vw;
+    padding: 6px;
+    position: fixed;
+    z-index: 999;
+    }
+    .carousel-slide {
+        display: none;
+        width: 100%;
+        height: 25vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .footer {
+        background-color: rgb(242, 227, 201);
+        padding: 10px 10px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 100;
+        position: relative;
+        top: -10px;
+    
+    }
+    
+    .footer__top {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .footer__section {
+        width: 20%;
+        font-size: .4rem;
+    }
+    
+    .footer__section h3 {
+        font-size: .4rem;
+        margin-bottom: 10px;
+    }
+    
+    .footer__section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer__section ul li {
+        margin-bottom: 4px;
+    }
+    
+    .footer__section ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    .footer__bottom {
+        margin-top: 10px;
+        text-align: center;
+        font-size: .9rem;
+    }
+    
+    .footer__bottom p,
+    .footer__bottom ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footer__bottom ul {
+        list-style-type: none;
+        margin-top: 10px;
+    }
+    
+    .footer__bottom ul li {
+        display: inline;
+        margin-right: 10px;
+    }
+    
+    .footer__bottom ul li:last-child {
+        margin-right: 0;
+    }
 }
