@@ -170,7 +170,15 @@
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
 }
+.newArrivals{
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 8vh;
 
+}
 .Products {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -225,6 +233,7 @@
     font-size: 20px;
     text-align: center;
     position: relative;
+    margin-top: -5vh;
   }
   
   .Mid_home_products {
@@ -296,7 +305,7 @@
     display: flex;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    gap: 40px;
+    gap: 10px;
     margin-top: 50px;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -353,5 +362,13 @@
     font-size: .4rem;
     cursor: pointer;
     font-family: "Poppins", sans-serif;
+  }
+  .newArrivals{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 2vh;
   }
 }

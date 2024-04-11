@@ -5,7 +5,8 @@ import data from "../Data/data.json"
 import cataforydata from "../Data/catagory.json"
 import offer from "../Data/offer.json"
 import moderndata from "../Data/HomeProducts.json"
-import  Practice  from '../../HomeCarousal';
+import  Practice  from '../../Carousals/HomeCarousal';
+import DailyCarousal from '../../Carousals/DailyCarousal'
 const Home = () => {
     return (
         <div>
@@ -40,6 +41,11 @@ const Home = () => {
             <div className="Add" >
 
             </div>
+            <div className="newArrivals">
+
+            <p>New Arrivals</p>
+            </div>
+            <DailyCarousal/>
             <div className='Products_persons'>
                 <p>Modern Magics</p>
             </div>
