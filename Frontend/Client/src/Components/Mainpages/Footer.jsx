@@ -27,7 +27,7 @@ const Footer = () => {
                     <p>Stay up-to-date with our latest offers and news.</p>
                 </div>
                 <div className="footer__section">
-                    <h3>Contact Us</h3>
+                    <h3>Help</h3>
                     <p>Email: info@example.com</p>
                     <p>Phone: 123-456-7890</p>
                     <p>Mon-Fri: 9am-5pm IST</p>

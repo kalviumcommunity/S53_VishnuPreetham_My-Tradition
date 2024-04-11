@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import img3 from "./Assets/Group4.png"
-import img2 from "./Assets/Group3.png"
-import img4 from "./Assets/Group1.png"
-import img1 from "./Assets/Group5.png"
-import './App.css'
+import img3 from "../Assets/Group4.png"
+import img2 from "../Assets/Group3.png"
+import img4 from "../Assets/Group1.png"
+import img1 from "../Assets/Group5.png"
+import img5 from "../Assets/Group7.png"
+import '../App.css'
 
 function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -21,8 +22,9 @@ function Carousel() {
     },
     {
       backgroundImage: `url(${img4})`,
-    
-    }
+      
+    },
+   { backgroundImage: `url(${img5})`,}
   ];
 
   useEffect(() => {
