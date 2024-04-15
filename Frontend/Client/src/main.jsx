@@ -4,6 +4,7 @@ import { Auth0Provider } from '@auth0/auth0-react';
 import App from './App';
 import { BrowserRouter } from "react-router-dom"
 import ParentContext from './Context/ParentContext';
+import { ChakraProvider } from '@chakra-ui/react'
 
 const root = createRoot(document.getElementById('root'));
 
@@ -15,10 +16,13 @@ root.render(
       redirect_uri: window.location.origin
     }}
   >
+    
     <BrowserRouter>
+    <ChakraProvider>
       <ParentContext>
         <App />
       </ParentContext>
+      </ChakraProvider>
     </BrowserRouter>
   </Auth0Provider>,
 );

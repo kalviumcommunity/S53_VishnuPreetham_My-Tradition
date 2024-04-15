@@ -7,9 +7,11 @@ import offer from "../Data/offer.json"
 import moderndata from "../Data/HomeProducts.json"
 import  Practice  from '../../Carousals/HomeCarousal';
 import DailyCarousal from '../../Carousals/DailyCarousal'
+import Navbar from './Navbar'
 const Home = () => {
     return (
         <div>
+      <Navbar/>
 
             <Practice/>
            

@@ -34,7 +34,7 @@ const Navbar = () => {
                     <Link to={"user_cart"}>
                         <Bag2 className='Bag2' size="32" color="#f5ddb0" />
                     </Link>
-                    <Link to={""}>
+                    <Link to={"profile_user"}>
                         <ProfileCircle className='ProfileCircle' size="32" color="#ebc5a1" />
                     </Link>
                     <Link to={""}>
