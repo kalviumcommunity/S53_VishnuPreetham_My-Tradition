@@ -2,6 +2,7 @@ import React, { useState,Fragment }  from 'react';
 import { Box, Flex, Icon, Text, Link, Image, Button, Heading, Stack, VStack, Drawer, Menu, MenuButton, MenuList, MenuItem, DrawerContent, IconButton, useDisclosure, DrawerOverlay, useColorModeValue, Avatar, Container, HStack, Tooltip, chakra, Divider ,Tag,FormControl,FormLabel,Input,Textarea} from '@chakra-ui/react';
 import { FiMenu } from 'react-icons/fi';
 import logo from "../../Assets/Logo.png"
+import logoon from "../../Assets/LogoOn.png"
 import { Logout } from 'iconsax-react';
 import { ShoppingCart } from 'iconsax-react';
 import { ProfileCircle } from 'iconsax-react';
@@ -54,7 +55,7 @@ export default function Index() {
             bg="wheat"
           />
           <Flex align="center" h={20} w={20}>
-            <img src={logo} alt="" />
+            <img src={logoon} alt="" />
           </Flex>
         </Flex>
         <Box as="main"  minH="30rem" bg={useColorModeValue('wheat')} h={"100%"} minHeight={"100vh"} w={"100%"}>

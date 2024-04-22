@@ -96,7 +96,6 @@
   margin-top: 10px;
   font-size: 14px;
 }
-
 .Products_persons {
   font-family: "Poppins", sans-serif;
   font-weight: 200;
@@ -107,57 +106,6 @@
   top: 40px;
 }
 
-.products_catagory {
-  display: flex;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  gap: 40px;
-  margin-top: 50px;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  text-align: center;
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-}
-
-.products_catagory img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.cat_prod {
-  position: relative;
-  cursor: pointer;
-}
-
-.categoryText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  padding: 5px;
-  margin: 0;
-  display: none;
-  transition: visibility 0.3s ease-in-out;
-}
-
-.cat_prod:hover .categoryText {
-  display: block;
-}
-.Catagory{
-  display: flex;
-  justify-content: space-around;
-  align-items: center; 
-  width: 60%; 
-  text-align: center;
-}
-.Catagory img{
-  width: 40px;
-  height: 40px;
-}
 .Modern_Products {
   display: flex;
   overflow-x: scroll;

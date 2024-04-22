@@ -159,7 +159,7 @@ Footer.css
 .carousel {
     position: relative;
     overflow: hidden;
-    margin-top: 18.6vh;
+    margin-top: 20.6vh;
 }
 
 .carousel-slide {
@@ -224,7 +224,7 @@ Footer.css
     }
 
     .carousel {
-        margin-top: 15vh;
+        margin-top: 29%;
     }
 
     .carousel-slide {
@@ -243,7 +243,6 @@ Footer.css
         font-weight: 100;
         position: relative;
         top: -10px;
-
     }
 
     .footer__top {
@@ -488,4 +487,14 @@ Footer.css
         cursor: pointer;
         width: 100%;
     }
+}
+.slides-images{
+    display: flex;
+    object-fit: contain;
+    justify-content: space-around;
+    padding: 10px;
+}
+.slides-images img{
+    width: 48%;
+    object-fit: contain;
 }

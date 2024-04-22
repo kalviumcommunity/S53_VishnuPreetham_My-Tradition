@@ -1,7 +1,27 @@
 const express = require("express")
 
 const ProductRoute = express.Router()
-const { State,Product,sareeProd,Kurtha,Croptop,WeddingModern,Nikkah,Telugu,Haldi,Bengali,AndhraPradesh, Odissa, Kerala, Karnataka, Maharastra, TamilNadu} = require('../Schemas/Productdata.js');
+const { State,Product,sareeProd,Kurtha,Croptop,WeddingModern,Nikkah,Punjabi,Telugu,Haldi,Bengali,AndhraPradesh, Odissa, Kerala, Karnataka, Maharastra, TamilNadu,kashmiri} = require('../Schemas/Productdata.js');
+/////////Get the Punjabi Dresses;
+ProductRoute.get('/punjabi', async (req, res) => {
+    try {
+        const data = await Punjabi.find();
+        res.json(data);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("Internal Server Error");
+    }
+});
+/////////Get the Kashmiri Dresses;
+ProductRoute.get('/kashmiriwedding', async (req, res) => {
+    try {
+        const data = await kashmiri.find();
+        res.json(data);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("Internal Server Error");
+    }
+});
 /////////Get the TamilNadu Dresses;
 ProductRoute.get('/tamilnaduwedding', async (req, res) => {
     try {

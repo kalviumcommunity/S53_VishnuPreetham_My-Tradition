@@ -87,4 +87,6 @@ const Image = mongoose.model('Image', imageSchema);
 const Event = mongoose.model('Event', eventSchema);
 const State = mongoose.model('State', stateSchema);
 const cart =mongoose.model('cart',cartScheema)
-module.exports = { Image, Event, State,Product,sareeProd,Kurtha,Croptop,WeddingModern,Nikkah,Telugu,Haldi,Bengali,AndhraPradesh,Odissa,Kerala,Karnataka,Maharastra,TamilNadu,cart};
+const kashmiri = mongoose.model('Kashmiri', productSchema);
+const Punjabi = mongoose.model('punjabi', productSchema);
+module.exports = { Image, Event, State,Product,sareeProd,Kurtha,Croptop,WeddingModern,Nikkah,Telugu,Haldi,Bengali,AndhraPradesh,Odissa,Kerala,Karnataka,Maharastra,TamilNadu,cart,kashmiri,Punjabi};
