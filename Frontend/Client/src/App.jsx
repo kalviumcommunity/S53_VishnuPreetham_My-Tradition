@@ -3,13 +3,15 @@ import Navbar from './Components/Mainpages/Navbar';
 import Footer from './Components/Mainpages/Footer';
 
 import  Profile  from './Components/UserData/Profile';
-
+import ProductPage from './Components/Products/Products';
 
 function App() {
   return (
     <>
       <div>
-      <AllRoutes/>
+
+      {/* <AllRoutes/> */}
+      <ProductPage/>
       {/* <Profile/> */}
       </div>
       {/* <LoginButton />

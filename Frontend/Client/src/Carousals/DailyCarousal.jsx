@@ -1,26 +1,33 @@
 import React, { useState, useEffect } from 'react';
-
-import img2 from "../Assets/NewArr4.png"
-import img4 from "../Assets/NewArr3.png"
-import img1 from "../Assets/NewArr1.png"
-import img5 from "../Assets/NewArr2.png"
+import plazas from "../Assets/Plazas.png"
+import printedkurthas from "../Assets/printedKurthas.png"
+import suits from "../Assets/Suits.png"
+import marchmagics from "../Assets/MarchMagics.png"
+import aprilarraivals from "../Assets/AprilArraivals.png"
+import summerstyles from "../Assets/SummerStyles.png"
 import '../App.css'
 
 function DailyCarousal() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      backgroundImage: `url(${img1})`,
+      img1: plazas,
+      img2: printedkurthas
     },
     {
-      backgroundImage: `url(${img2})`,
-      
+      img1: marchmagics, 
+      img2: suits
+
     },
     {
-      backgroundImage: `url(${img4})`,
-      
+      img1: aprilarraivals,
+      img2: summerstyles
+
     },
-   { backgroundImage: `url(${img5})`,}
+    {
+      img1: plazas,
+      img2: printedkurthas
+    }
   ];
 
   useEffect(() => {
@@ -32,19 +39,18 @@ function DailyCarousal() {
   }, [slides.length]);
 
   return (
-    <div className="carousel2">
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
-          style={{ backgroundImage: slide.backgroundImage }}
-        >
-          <div className="slide-content">
-           
-       
-          </div>
+    <div className="carousel2" >
+      
+      {slides.map((img,i)=>(
+        <div key={i}
+        className={`carousel-slide ${i === currentSlide ? 'active' : ''}`}>
+        <div className="slides-images">
+          <img style={{cursor:"pointer"}} src={img.img1} alt="" />
+          <img style={{cursor:"pointer"}} src={img.img2} alt="" />
+        </div>
         </div>
       ))}
+        
     </div>
   );
 }

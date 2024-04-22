@@ -1,0 +1,242 @@
+[
+    {
+        "product_details": {
+            "description": "Punjabi Red and Gold Bridal Lehenga",
+            "top_type": "Lehenga",
+            "top_style": "Bridal",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Silk"
+        },
+        "img": "image_url_16",
+        "price": "15000",
+        "Description": "Punjabi Red and Gold Bridal Lehenga",
+        "Aboutproduct": "Make a statement on your wedding day with this stunning Punjabi Red and Gold Bridal Lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+        "color": "Red and Gold"
+    },
+    {
+        "product_details": {
+            "description": "Patiala Style Groom Sherwani Set",
+            "top_type": "Sherwani",
+            "top_style": "Groom",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Brocade"
+        },
+        "img": "image_url_17",
+        "price": "18000",
+        "Description": "Patiala Style Groom Sherwani Set",
+        "Aboutproduct": "Look dashing on your big day with this Patiala Style Groom Sherwani Set. The intricate detailing and royal fabric make it a perfect choice for the groom.",
+        "color": "Assorted"
+    },
+    {
+        "product_details": {
+            "description": "Embroidered Pink Punjabi Suit",
+            "top_type": "Suit",
+            "top_style": "Embroidered",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Georgette"
+        },
+        "img": "image_url_18",
+        "price": "9000",
+        "Description": "Embroidered Pink Punjabi Suit",
+        "Aboutproduct": "Dazzle in this Embroidered Pink Punjabi Suit, perfect for any wedding occasion. The delicate embroidery and vibrant color make it a standout ensemble.",
+        "color": "Pink"
+    },
+    {
+        "product_details": {
+            "description": "Traditional Punjabi Phulkari Dupatta",
+            "top_type": "Dupatta",
+            "top_style": "Traditional",
+            "top_pattern": "Phulkari",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Chiffon"
+        },
+        "img": "image_url_19",
+        "price": "5000",
+        "Description": "Traditional Punjabi Phulkari Dupatta",
+        "Aboutproduct": "Add a touch of tradition to your outfit with this beautiful Traditional Punjabi Phulkari Dupatta. The intricate Phulkari work showcases the rich cultural heritage of Punjab.",
+        "color": "Assorted"
+    },
+    {
+        "product_details": {
+            "description": "Golden Punjabi Jutti with Intricate Zari Work",
+            "top_type": "Jutti",
+            "top_style": "Traditional",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Leather"
+        },
+        "img": "image_url_20",
+        "price": "2500",
+        "Description": "Golden Punjabi Jutti with Intricate Zari Work",
+        "Aboutproduct": "Complete your Punjabi wedding attire with these Golden Punjabi Jutti adorned with intricate Zari work. They add a touch of tradition and elegance to your ensemble.",
+        "color": "Gold"
+    },
+    {
+        "product_details": {
+            "description": "Royal Blue Punjabi Bandhgala Jacket",
+            "top_type": "Jacket",
+            "top_style": "Bandhgala",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Velvet"
+        },
+        "img": "image_url_21",
+        "price": "12000",
+        "Description": "Royal Blue Punjabi Bandhgala Jacket",
+        "Aboutproduct": "Make a style statement with this Royal Blue Punjabi Bandhgala Jacket. Perfect for groomsmen or wedding guests, its regal look adds sophistication to any outfit.",
+        "color": "Royal Blue"
+    },
+    {
+        "product_details": {
+            "description": "Fuchsia Pink Punjabi Anarkali Gown",
+            "top_type": "Gown",
+            "top_style": "Anarkali",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Net"
+        },
+        "img": "image_url_22",
+        "price": "14000",
+        "Description": "Fuchsia Pink Punjabi Anarkali Gown",
+        "Aboutproduct": "Be the center of attention in this stunning Fuchsia Pink Punjabi Anarkali Gown. Its intricate detailing and vibrant color make it a perfect choice for any wedding event.",
+        "color": "Fuchsia Pink"
+    },
+    {
+        "product_details": {
+            "description": "Handcrafted Punjabi Bridal Chura Set",
+            "top_type": "Chura",
+            "top_style": "Bridal",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Acrylic"
+        },
+        "img": "image_url_23",
+        "price": "6000",
+        "Description": "Handcrafted Punjabi Bridal Chura Set",
+        "Aboutproduct": "Complete your bridal look with this Handcrafted Punjabi Bridal Chura Set. Adorned with intricate designs, it adds a traditional touch to your wedding ensemble.",
+        "color": "Red and White"
+    },
+    {
+        "product_details": {
+            "description": "Magenta Punjabi Patiala Salwar",
+            "top_type": "Salwar",
+            "top_style": "Patiala",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Cotton"
+        },
+        "img": "image_url_24",
+        "price": "4000",
+        "Description": "Magenta Punjabi Patiala Salwar",
+        "Aboutproduct": "Stay comfortable and stylish in this Magenta Punjabi Patiala Salwar. Its vibrant color and comfortable fabric make it perfect for any wedding celebration.",
+        "color": "Magenta"
+    },
+    {
+        "product_details": {
+            "description": "Golden Punjabi Groom Turban with Brocade Work",
+            "top_type": "Turban",
+            "top_style": "Groom",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Silk"
+        },
+        "img": "image_url_25",
+        "price": "3000",
+        "Description": "Golden Punjabi Groom Turban with Brocade Work",
+        "Aboutproduct": "Complete your groom's attire with this Golden Punjabi Groom Turban adorned with intricate Brocade work. Its regal look adds a touch of tradition to the wedding ceremony.",
+        "color": "Gold"
+    },
+    {
+        "product_details": {
+            "description": "Embroidered Red Punjabi Bridal Saree",
+            "top_type": "Saree",
+            "top_style": "Bridal",
+            "top_pattern": "Embroidered",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Silk"
+        },
+        "img": "image_url_26",
+        "price": "16000",
+        "Description": "Embroidered Red Punjabi Bridal Saree",
+        "Aboutproduct": "Make a stunning entrance on your wedding day with this Embroidered Red Punjabi Bridal Saree. The intricate embroidery and rich silk fabric make it a perfect choice for any bride.",
+        "color": "Red"
+    },
+    {
+        "product_details": {
+            "description": "Punjabi Ivory and Gold Groom Kurta Set",
+            "top_type": "Kurta",
+            "top_style": "Groom",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Cotton"
+        },
+        "img": "image_url_27",
+        "price": "22000",
+        "Description": "Punjabi Ivory and Gold Groom Kurta Set",
+        "Aboutproduct": "Look dashing on your wedding day with this Punjabi Ivory and Gold Groom Kurta Set. The combination of ivory and gold adds a touch of sophistication to your ensemble.",
+        "color": "Ivory and Gold"
+    },
+    {
+        "product_details": {
+            "description": "Traditional Punjabi Phulkari Jacket",
+            "top_type": "Jacket",
+            "top_style": "Traditional",
+            "top_pattern": "Phulkari",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Cotton"
+        },
+        "img": "image_url_28",
+        "price": "8500",
+        "Description": "Traditional Punjabi Phulkari Jacket",
+        "Aboutproduct": "Add a traditional touch to your outfit with this beautiful Traditional Punjabi Phulkari Jacket. The vibrant Phulkari work enhances the beauty of this classic attire.",
+        "color": "Assorted"
+    },
+    {
+        "product_details": {
+            "description": "Pink Punjabi Bridal Bangles Set",
+            "top_type": "Bangles",
+            "top_style": "Bridal",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Metal"
+        },
+        "img": "image_url_29",
+        "price": "7000",
+        "Description": "Pink Punjabi Bridal Bangles Set",
+        "Aboutproduct": "Complete your bridal look with this Pink Punjabi Bridal Bangles Set. The intricate design and vibrant pink color make it a perfect accessory for your wedding day.",
+        "color": "Pink"
+    },
+    {
+        "product_details": {
+            "description": "Emerald Green Punjabi Anarkali Suit",
+            "top_type": "Suit",
+            "top_style": "Anarkali",
+            "top_pattern": "Solid",
+            "sleeve_detail": null,
+            "fit": null,
+            "fabric": "Georgette"
+        },
+        "img": "image_url_30",
+        "price": "12000",
+        "Description": "Emerald Green Punjabi Anarkali Suit",
+        "Aboutproduct": "Stand out in this stunning Emerald Green Punjabi Anarkali Suit. Perfect for any wedding occasion, its elegant design and vibrant color will surely make you the center of attention.",
+        "color": "Emerald Green"
+    }
+]

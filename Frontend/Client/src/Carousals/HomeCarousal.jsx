@@ -4,6 +4,7 @@ import img2 from "../Assets/Group3.png"
 import img4 from "../Assets/Group1.png"
 import img1 from "../Assets/Group5.png"
 import img5 from "../Assets/Group7.png"
+import group9 from "../Assets/NewArr1.png"
 import '../App.css'
 
 function Carousel() {
@@ -14,17 +15,18 @@ function Carousel() {
     },
     {
       backgroundImage: `url(${img2})`,
-      
+
     },
     {
       backgroundImage: `url(${img3})`,
-     
+
     },
     {
       backgroundImage: `url(${img4})`,
-      
+
     },
-   { backgroundImage: `url(${img5})`,}
+    { backgroundImage: `url(${img5})`, },
+    { backgroundImage: `url(${group9})`, }
   ];
 
   useEffect(() => {
@@ -44,8 +46,8 @@ function Carousel() {
           style={{ backgroundImage: slide.backgroundImage }}
         >
           <div className="slide-content">
-           
-       
+
+
           </div>
         </div>
       ))}
