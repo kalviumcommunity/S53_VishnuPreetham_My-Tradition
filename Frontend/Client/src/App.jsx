@@ -4,21 +4,23 @@ import Footer from './Components/Mainpages/Footer';
 
 import  Profile  from './Components/UserData/Profile';
 import ProductPage from './Components/Products/Products';
+import FullProduct from './Components/Products/FullProduct';
 
 function App() {
   return (
     <>
       <div>
 
-      {/* <AllRoutes/> */}
-      <ProductPage/>
+      <AllRoutes/>
+      {/* <ProductPage/> */}
+      {/* <FullProduct/> */}
       {/* <Profile/> */}
       </div>
       {/* <LoginButton />
       <LogoutButton/>
       <Profile /> */}
       {/* <Home/> */}
-      {/* <Footer/> */}
+      <Footer/>
     </>
   )
 }
