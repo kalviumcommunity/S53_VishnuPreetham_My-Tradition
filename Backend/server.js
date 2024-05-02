@@ -1,7 +1,6 @@
 const express=require("express")
 const app=express()
 const cors=require("cors")
-const router=require("./Routes")
 const databaseconnection=require("./db")
 const razorrouter=require("./RazorPay/razorroutes")
 require("dotenv").config()
@@ -10,7 +9,7 @@ databaseconnection()
 
 app.use(express.json())
 app.use(cors())
-app.use(router)
+
 app.use(razorrouter)
 
 ///////Creating the Routes
