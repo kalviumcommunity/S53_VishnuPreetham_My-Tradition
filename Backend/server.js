@@ -1,7 +1,7 @@
 const express=require("express")
 const app=express()
 const cors=require("cors")
-const router=require("./Routes")
+
 const databaseconnection=require("./db")
 const razorrouter=require("./RazorPay/razorroutes")
 const ProductRoute=require("./Routes/Productroutes.js")
@@ -11,7 +11,7 @@ databaseconnection()
 
 app.use(express.json())
 app.use(cors())
-app.use(router)
+
 app.use(razorrouter)
 app.use(ProductRoute);
 
@@ -22,4 +22,4 @@ app.get("/",(req,res)=>{
 })
 app.listen(PORT,()=>{
     console.log(`http://localhost:${PORT}/`)
-})
+}) 

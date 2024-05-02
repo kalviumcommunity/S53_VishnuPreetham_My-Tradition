@@ -2,30 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const imageSchema = new Schema({
-    img: String,
-    imgDescription: String
-});
-
-
-const eventSchema = new Schema({
-    event_name: String,
-    state: String,
-    tradition: String,
-    cost: String,
-    stock: String,
-    images: [imageSchema] 
-});
-
-const stateSchema = new Schema({
-    name: String,
-    events: [{
-        name: String,
-        traditions: [eventSchema] 
-    }]
-});
-
-
 
 const productSchema = new Schema({
   img: String,
@@ -47,6 +23,10 @@ const productSchema = new Schema({
   additional_info: {
     ideal_occasions: [String],
     accessories: [String]
+  },
+  Likes:{
+    type:[String],
+    default:[]
   }
 });
 
@@ -83,10 +63,7 @@ const Kerala = mongoose.model('Kerala', productSchema);
 const Karnataka = mongoose.model('Karnatakas', productSchema);
 const Maharastra = mongoose.model('Maharastra', productSchema);
 const TamilNadu = mongoose.model('TamilNadu', productSchema);
-const Image = mongoose.model('Image', imageSchema);
-const Event = mongoose.model('Event', eventSchema);
-const State = mongoose.model('State', stateSchema);
 const cart =mongoose.model('cart',cartScheema)
 const kashmiri = mongoose.model('Kashmiri', productSchema);
 const Punjabi = mongoose.model('punjabi', productSchema);
-module.exports = { Image, Event, State,Product,sareeProd,Kurtha,Croptop,WeddingModern,Nikkah,Telugu,Haldi,Bengali,AndhraPradesh,Odissa,Kerala,Karnataka,Maharastra,TamilNadu,cart,kashmiri,Punjabi};
+module.exports = { Product,sareeProd,Kurtha,Croptop,WeddingModern,Nikkah,Telugu,Haldi,Bengali,AndhraPradesh,Odissa,Kerala,Karnataka,Maharastra,TamilNadu,cart,kashmiri,Punjabi};
