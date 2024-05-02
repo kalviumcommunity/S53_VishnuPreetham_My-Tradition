@@ -5,13 +5,14 @@ import Footer from './Components/Mainpages/Footer';
 import  Profile  from './Components/UserData/Profile';
 import ProductPage from './Components/Products/Products';
 import FullProduct from './Components/Products/FullProduct';
+import Signup from './FireBaseLogin/Signup';
 
 function App() {
   return (
     <>
       <div>
 
-      <AllRoutes/>
+      {/* <AllRoutes/> */}
       {/* <ProductPage/> */}
       {/* <FullProduct/> */}
       {/* <Profile/> */}
@@ -20,7 +21,8 @@ function App() {
       <LogoutButton/>
       <Profile /> */}
       {/* <Home/> */}
-      <Footer/>
+      <Signup/>
+      {/* <Footer/> */}
     </>
   )
 }
