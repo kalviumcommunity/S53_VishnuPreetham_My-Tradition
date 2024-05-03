@@ -1,4 +1,4 @@
-import React, { useState,Fragment }  from 'react';
+import React, { useState,Fragment, useContext }  from 'react';
 import { Box, Flex, Icon, Text, Link, Image, Button, Heading, Stack, VStack, Drawer, Menu, MenuButton, MenuList, MenuItem, DrawerContent, IconButton, useDisclosure, DrawerOverlay, useColorModeValue, Avatar, Container, HStack, Tooltip, chakra, Divider ,Tag,FormControl,FormLabel,Input,Textarea} from '@chakra-ui/react';
 import { FiMenu } from 'react-icons/fi';
 import logo from "../../Assets/Logo.png"
@@ -11,8 +11,16 @@ import { TruckTick } from 'iconsax-react';
 import myorder from "../../Assets/MyOrder.png"
 import "../../App.css"
 import { Edit } from 'iconsax-react';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase/firebase';
+import { useNavigate } from 'react-router-dom';
+import { AppContext } from '../../Context/ParentContext';
+
+
 
 export default function Index() {
+  const {setUser , setSignin}=useContext(AppContext)
+  const navigate=useNavigate()
   const { isOpen, onClose, onOpen,isclose } = useDisclosure();
   const [currentPage, setCurrentPage] = useState('main');
   const handleNavItemClicked = (page) => {
@@ -20,16 +28,32 @@ export default function Index() {
     onClose();
     
   };
+  const handleSignOut = async () => {
+    try {
+      // alert(`${user} hello`)
+      // alert(`hii ${user}`)
+      // console.log("hii")
+      alert("hello")
+        setSignin(false)
+        await signOut(auth)
+        console.log("logout successful")
+        // Navigate('/login')
+        navigate("/")
+        setUser({})
+    } catch (error) {
+        console.log(error);
+        }
+    };
 
   
 
   return (
     <Box as="section" bg={useColorModeValue('gray.50', 'gray.700')} minH="100vh">
-      <SidebarContent display={{ base: 'none', md: 'unset' }} handleNavItemClicked={handleNavItemClicked} />
+      <SidebarContent display={{ base: 'none', md: 'unset' }} handleNavItemClicked={handleNavItemClicked} handleSignOut={handleSignOut}/>
       <Drawer isOpen={isOpen} onClose={onClose} placement="left">
         <DrawerOverlay />
         <DrawerContent bg={useColorModeValue('none')} w={60}>
-          <SidebarContent borderRight="none" onClose={onClose} handleNavItemClicked={handleNavItemClicked} />
+          <SidebarContent borderRight="none" onClose={onClose} handleNavItemClicked={handleNavItemClicked} handleSignOut={handleSignOut}/>
         </DrawerContent>
       </Drawer>
       <Box ml={{ base: 0, md: 60 }} transition=".3s ease" >
@@ -69,7 +93,8 @@ export default function Index() {
     </Box>
   );
 }
-const SidebarContent = ({ handleNavItemClicked, ...props }) => (
+const SidebarContent = ({ handleNavItemClicked,handleSignOut, ...props }) => (
+  
   <Box
     as="nav"
     pos="fixed"
@@ -104,7 +129,7 @@ const SidebarContent = ({ handleNavItemClicked, ...props }) => (
           <NavItem onClick={() => {handleNavItemClicked('cart');onClose()}} icon={ShoppingCart}>My Cart</NavItem>
           <NavItem onClick={() => {handleNavItemClicked('orders');onClose()}} icon={myorder}>My Orders</NavItem>
           <NavItem onClick={() => {handleNavItemClicked('track');onClose()}} icon={TruckTick}>Track Order</NavItem>
-          <NavItem icon={Logout}>Logout</NavItem>
+          <NavItem icon={Logout} onClick={()=>{handleSignOut()}}>Logout</NavItem>
         </Flex>
       </Box>
 
@@ -112,7 +137,8 @@ const SidebarContent = ({ handleNavItemClicked, ...props }) => (
         <Avatar
           size={'sm'}
           name="Lord vishnu"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5pORzbYUlLTJFow2_lGPgbmR1i8Q2BKenLECxW_pKjg&s"
+        // src={user.photoURL} 
+          
         />
       </Flex>
     </VStack>
@@ -154,16 +180,18 @@ const NavItem = ({ icon, children, onClick }) => {
   );
 };
 const UserCardContainer = () => {
+  const{user} =useContext(AppContext);
+
   return (
     <>
     <div className='stack'>
       <div className="profile">
-        <img  src="https://static.thenounproject.com/png/363633-200.png" alt="" />
+        <img  src={user.photoURL} alt="" />
       </div>
       <div className="details">
         <h1>Profile Details</h1>
-        <p>Mohan Kumar</p>
-        <p>mohankumar@gmail.com</p>
+        <p>{user.displayName}</p>
+        <p>{user.email}</p>
       </div>
       <div className="details">
         <h1>Contact Details</h1>
@@ -297,23 +325,24 @@ import { GoLocation } from 'react-icons/go';
 import { BsPhone } from 'react-icons/bs';
 import { HiOutlineMail } from 'react-icons/hi';
 
-const contactOptions = [
-  {
-    label: 'Address',
-    value: 'A108 Adam Street, NY 535022, USA',
-    icon: GoLocation
-  },
-  {
-    label: 'PHONE NUMBER',
-    value: '+1 5589 55488 55',
-    icon: BsPhone
-  },
-  {
-    label: 'EMAIL',
-    value: 'info@example.com',
-    icon: HiOutlineMail
-  }
-];
+
+// const contactOptions = [
+//   {
+//     label: 'Address',
+//     value: 'A108 Adam Street, NY 535022, USA',
+//     icon: GoLocation
+//   },
+//   {
+//     label: 'PHONE NUMBER',
+//     value: '+1 5589 55488 55',
+//     icon: BsPhone
+//   },
+//   {
+//     label: 'EMAIL',
+//     value: 'info@example.com',
+//     icon: HiOutlineMail
+//   }
+// ];
 
 const Contact = () => {
   return (

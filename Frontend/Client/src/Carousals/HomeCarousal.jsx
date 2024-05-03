@@ -10,32 +10,27 @@ import '../App.css'
 function Carousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    {
-      backgroundImage: `url(${img1})`,
-    },
-    {
-      backgroundImage: `url(${img2})`,
-
-    },
-    {
-      backgroundImage: `url(${img3})`,
-
-    },
-    {
-      backgroundImage: `url(${img4})`,
-
-    },
-    { backgroundImage: `url(${img5})`, },
-    { backgroundImage: `url(${group9})`, }
+    { backgroundImage: `url(${img1})` },
+    { backgroundImage: `url(${img2})` },
+    { backgroundImage: `url(${img3})` },
+    { backgroundImage: `url(${img4})` },
+    { backgroundImage: `url(${img5})` },
+    { backgroundImage: `url(${group9})` }
   ];
 
+  const Nextsilde = () => {
+    setCurrentSlide((PreviousSilde) => (PreviousSilde + 1) % slides.length);
+  };
+
+  const PreviousSilde = () => {
+    setCurrentSlide((PreviousSilde) => (PreviousSilde - 1 + slides.length) % slides.length);
+  };
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 2500);
+    const interval = setInterval(Nextsilde, 2500);
 
     return () => clearInterval(interval);
-  }, [slides.length]);
+  }, []);
 
   return (
     <div className="carousel">
@@ -44,15 +39,25 @@ function Carousel() {
           key={index}
           className={`carousel-slide ${index === currentSlide ? 'active' : ''}`}
           style={{ backgroundImage: slide.backgroundImage }}
-        >
-          <div className="slide-content">
-
-
-          </div>
-        </div>
+        />
       ))}
+      <button className="carousel-control prev" onClick={PreviousSilde}>
+        &#10094;
+      </button>
+      <button className="carousel-control next" onClick={Nextsilde}>
+        &#10095;
+      </button>
+      <div className="dots">
+        {slides.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentSlide ? 'active' : ''}`}
+            onClick={() => setCurrentSlide(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
 
-export default Carousel;
+export default Carousel;

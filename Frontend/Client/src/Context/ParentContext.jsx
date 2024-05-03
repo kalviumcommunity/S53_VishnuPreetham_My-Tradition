@@ -8,6 +8,9 @@ export const AppContext = createContext()
 const ParentContext = ({ children }) => {
 const [user, setUser] = useState({})
 const [signin,setSignin]=useState(false)
+const [signup,setSignup]=useState(false)
+
+
 useEffect(() => {
   const unsub = onAuthStateChanged(auth, (user) => {    
     setUser(user);
@@ -22,7 +25,7 @@ useEffect(() => {
   };
 }, []);
 
-  return <AppContext.Provider value={{ user,signin }} >
+  return <AppContext.Provider value={{ user,signin,setUser,setSignin,setSignup,signup}} >
     {children}
   </AppContext.Provider>
 }
