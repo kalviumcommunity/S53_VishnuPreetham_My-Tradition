@@ -39,7 +39,7 @@ function DailyCarousal() {
   }, [slides.length]);
 
   return (
-    <div className="carousel2" >
+    <div className="carousel2" >  
       
       {slides.map((img,i)=>(
         <div key={i}

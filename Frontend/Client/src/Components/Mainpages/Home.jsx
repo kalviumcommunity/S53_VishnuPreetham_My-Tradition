@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import "./Home.css"
 import Addimg from "../../Assets/Group6.png"
 import data from "../Data/data.json"
@@ -8,7 +8,18 @@ import moderndata from "../Data/HomeProducts.json"
 import Practice from '../../Carousals/HomeCarousal';
 import DailyCarousal from '../../Carousals/DailyCarousal'
 import Navbar from './Navbar'
+import Footer from './Footer'
+import Signup from '../../FireBaseLogin/Signup'
+import { AppContext } from '../../Context/ParentContext'
+import Signin from '../../FireBaseLogin/Signin'
+import { CloseSquare } from 'iconsax-react'
 const Home = () => {
+    const {open,isexist,signin} = useContext(AppContext);
+    const [block,setBlock]=useState(true)
+    
+    const Open=()=>{
+
+    }
     return (
         <div>
             <Navbar />
@@ -48,6 +59,12 @@ const Home = () => {
                     </>
                 ))}
             </div>
+<Footer/>
+
+ {open && <div className="userloginbox" style={{
+
+ }}> {open && !isexist && <Signup/>} {isexist  &&  <Signin/>}</div>}
+
 
         </div>
     )

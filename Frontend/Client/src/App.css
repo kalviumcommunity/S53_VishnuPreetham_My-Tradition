@@ -29,7 +29,8 @@ body {
     top: 0;
 }
 
-/* Navbar Styles */
+/* /////////////////////////////   Navbar Styles /////////////////////////////////////// */
+
 .navbar {
     display: flex;
     /* justify-content: space-between; */
@@ -498,3 +499,152 @@ Footer.css
     width: 48%;
     object-fit: contain;
 }
+/* Resetting default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    /* background-color: #cc3d5e;    */
+    border: 2px solid wheat;
+    /* color: wheat; */
+    height: 100%;
+    margin-top: 25vh;
+  }
+  .form-container img{
+    width: 30%;
+  }
+
+  .form-label {
+    display: block;
+    margin-top: 15px;
+  }
+  
+  .form-container p:hover{
+    /* text-decoration: underline; */
+    color: blue;
+    cursor: pointer;
+    
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for error messages */
+  .error-message {
+    color: rgb(237, 208, 154);
+    font-size: 14px;
+  }
+  
+  /* Style for submit button */
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(237, 208, 154);
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  /* ////////// xxxxxxxxxxx Carousal xxxxxxxxxxxx ///////////// */
+  .carousel-slide.active {
+    opacity: 1;
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 2;
+    background-color: white;
+    padding: 5px;
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }
+  
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: #333;
+ }
+ .userloginbox{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    z-index: 9999;
+    background-color: white;
+    /* border: 2px solid wheat; */
+ }
+ .check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25vh;
+}
+
+.check img {
+    width: 100px; 
+    height: auto; 
+}
+
+.check p:first-of-type {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+}
+
+.check p:last-of-type {
+    font-size: 16px; 
+    margin-bottom: 20px; 
+}
+
+.check button {
+    padding: 10px 20px; 
+    margin: 5px; 
+}
+
