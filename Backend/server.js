@@ -4,7 +4,7 @@ const cors=require("cors")
 const route=require("./Routes/Routes.js")
 const databaseconnection=require("./db")
 const razorrouter=require("./RazorPay/razorroutes")
-const ProductRoute=require("./Routes/Productroutes.js")
+const ProductRoute=require("./Routes/Product.js")
 require("dotenv").config()
 databaseconnection()
 /////Middlewares Config.

@@ -1,7 +1,7 @@
 const express = require("express")
 
 const ProductRoute = express.Router()
-const { State,Product,sareeProd,Kurtha,Croptop,WeddingModern,Nikkah,Punjabi,Telugu,Haldi,Bengali,AndhraPradesh, Odissa, Kerala, Karnataka, Maharastra, TamilNadu,kashmiri} = require('../Schemas/Productdata.js');
+const { State,Product,sareeProd,Kurtha,Croptop,WeddingModern,Nikkah,Punjabi,Telugu,Haldi,Bengali,AndhraPradesh, Odissa, Kerala, Karnataka, Maharastra, TamilNadu,kashmiri} = require('../Schemas/ProductSchema.js');
 /////////Get the Punjabi Dresses;
 ProductRoute.get('/punjabi', async (req, res) => {
     try {
