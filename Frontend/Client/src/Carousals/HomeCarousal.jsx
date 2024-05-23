@@ -6,8 +6,10 @@ import img1 from "../Assets/Group5.png"
 import img5 from "../Assets/Group7.png"
 import group9 from "../Assets/NewArr1.png"
 import '../App.css'
+import { useNavigate } from 'react-router-dom';
 
 function Carousel() {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     { backgroundImage: `url(${img1})` },
@@ -33,7 +35,7 @@ function Carousel() {
   }, []);
 
   return (
-    <div className="carousel">
+    <div className="carousel" onClick={()=>{navigate("/products_page")}}>
       {slides.map((slide, index) => (
         <div
           key={index}

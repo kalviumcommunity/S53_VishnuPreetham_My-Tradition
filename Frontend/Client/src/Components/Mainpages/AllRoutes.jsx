@@ -16,10 +16,11 @@ const AllRoutes = () => {
         <Route path='profile_user' element={<Profile/>}/>
         <Route path='user_cart' element={<Cart/>}/>
         <Route path='wishlist' element={<Wishlist/>} />
-        <Route path='States' element={<States/>}/>
-        <Route path='States/products' element={<Products/>}/>
-        <Route path='signup/signin' element={<Signin/>}/>
-        <Route path='signup' element={<Signup/>}/>
+        {/* <Route path='/States' element={<States/>}/> */}
+        {/* <Route path='/States/products' element={<Products/>}/> */}
+        <Route path='/signup/signin' element={<Signin/>}/>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/products_page' element={<Products/>}/>
       </Routes>
     </div>
   )

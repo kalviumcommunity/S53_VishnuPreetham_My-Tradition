@@ -4,6 +4,8 @@ import './Product.css';
 import { Send } from 'iconsax-react';
 import Navbar from '../Mainpages/Navbar';
 import { ArrowDown2,Heart } from 'iconsax-react';
+import { arrayRemove, arrayUnion, doc, updateDoc } from 'firebase/firestore';
+import { db } from '../../firebase/firebase';
 
 const FullProduct = () => {
     const [isSharing, setIsSharing] = useState(false);
@@ -29,6 +31,23 @@ const FullProduct = () => {
         "Aboutproduct": "Make a statement on your wedding day with this stunning Punjabi Red and Gold Bridal Lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
         "color": "Red and Gold"
     }
+    const handleCart = async (product) => {
+        try {
+            const userRef = doc(db, 'users', user.uid);
+            if (added) {
+                await updateDoc(userRef, {
+                    AddToCart: arrayRemove(product),
+                });
+            } else {
+                await updateDoc(userRef, {
+                    AddToCart: arrayUnion(product),
+                });
+                console.log("SuccessFully Added")
+            }
+        } catch (error) {
+            console.error("Error handling wishlist:", error);
+        }
+    }
     const toggleShare = () => {
         setIsSharing(!isSharing);
     };
@@ -48,7 +67,6 @@ const FullProduct = () => {
                         <img src={Product.img4} alt="" />
                     </div>
                     <div className="mainimg">
-
                         <img src={Product.img} alt="" />
                     </div>
                 </div>

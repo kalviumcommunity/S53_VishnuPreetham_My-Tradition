@@ -10,8 +10,8 @@ import { AppContext } from '../../Context/ParentContext';
 import { Login } from 'iconsax-react';
 
 const Navbar = () => {
-    const { signin} = useContext(AppContext);
-
+    const { signin } = useContext(AppContext);
+    const navigate = useNavigate()
     return (
         <div>
             <div className="mainnav">
@@ -38,30 +38,18 @@ const Navbar = () => {
                         }}
                     ></div>
                     <div className="CartBoxes">
-                        <Link to={"user_cart"}>
-                            <Bag2
-                                className='Bag2'
-                                size="32"
-                                color="#f5ddb0"
-                            />
-                        </Link>
-                        <Link to={"signup"} style={{
-                            display: signin ? "none" : "block"
-                        }}>
-                                <Login size="32" color="#ebc5a1" /></Link>
-                            
-                        <Link to={"profile_user"} style={{display: signin ? "block" : "none"}}>
-                            
-                                <ProfileCircle className='ProfileCircle' size="32" color="#ebc5a1" />
-                            
-                        </Link>
-                        <Link to={"wishlist"}>
-                            <Heart className='Heart' size="32" color="#ebc5a1" />
-                        </Link>
+                        <Bag2
+                            className='Bag2'
+                            size="32"
+                            color="#f5ddb0"
+                            onClick={() => { navigate("/user_cart") }}
+                        />
+                        {signin ? (<ProfileCircle onClick={() => { navigate("/profile_user") }} className='ProfileCircle' size="32" color="#ebc5a1" />) : (<Login size="32" onClick={() => { navigate("signup") }} color="#ebc5a1" />)}
+                        <Heart onClick={() => { navigate("/wishlist") }} className='Heart' size="32" color="#ebc5a1" />
                     </div>
                 </div>
             </div>
-           
+
         </div >
     )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Box, VStack, Drawer, DrawerContent, IconButton, useDisclosure, DrawerOverlay, useColorModeValue } from '@chakra-ui/react';
 import { FiMenu } from 'react-icons/fi';
 import "./Product.css"
@@ -6,6 +6,10 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 import Navbar from "./../Mainpages/Navbar"
 import axios from "axios"
+import { arrayRemove, arrayUnion, doc, updateDoc } from 'firebase/firestore';
+import { db } from '../../firebase/firebase';
+import { Heart } from 'iconsax-react';
+import { AppContext } from '../../Context/ParentContext';
 
 
 export default function ProductPage() {
@@ -104,7 +108,7 @@ const SidebarContent = ({ ...props }) => {
                                 <input type="checkbox" value="Pujabi" />
                                 Pujabi
                             </label><br />
-
+                            {/* <label htmlFor=""></label> */}
                             <label>
                                 <input type="checkbox" value="Kashmiri" />
                                 Kashmiri
@@ -150,8 +154,28 @@ const SidebarContent = ({ ...props }) => {
 }
 const Products = () => {
     const [products, setproducts] = useState([]);
+    const {user} = useContext(AppContext);
+    // const [product,setProduct]=useState({})
+    const [added,setAdded]=useState(false)
+    const handleWishlist = async (product) => {
+        try {
+            const userRef = doc(db, 'users', user.uid);
+            if (added) {
+                await updateDoc(userRef, {
+                    wishlist: arrayRemove(product),
+                });
+            } else {
+                await updateDoc(userRef, {
+                    wishlist: arrayUnion(product),
+                });
+                console.log("SuccessFully Added")
+            }
+        } catch (error) {
+            console.error("Error handling wishlist:", error);
+        }
+    }
     const fetchData = () => {
-        axios.get("https://s53-vishnupreetham-my-tradition.onrender.com/Bengali").then((res) => {
+        axios.get("http://localhost:3000/Bengali").then((res) => {
             // console.log(res.data)
             setproducts(res.data)
         }).catch((err) => { console.log(err) })
@@ -162,6 +186,9 @@ const Products = () => {
             <div className='products'>
                 {products.map((product, i) => (
                     <div className='product-card' key={i}>
+
+                        <Heart onClick={() => { handleWishlist(product) }} className='Heart' size="32" color="#ebc5a1" />
+
                         <img src={product.img} alt={product.product_details.description} className='product-image' />
                         <div className='product-details'>
                             <p className='product-description'>{product.product_details.description ? product.product_details.description.substring(0, 50).concat('...') : ''}</p>
