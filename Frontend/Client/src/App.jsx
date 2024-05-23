@@ -7,24 +7,14 @@ import ProductPage from './Components/Products/Products';
 import FullProduct from './Components/Products/FullProduct';
 import Signup from './FireBaseLogin/Signup';
 import Signin from './FireBaseLogin/Signin';
+import Wishlist from './Components/Mainpages/Wishlist';
 
 function App() {
   return (
     <>
-      <div>
 
       <AllRoutes/>
-      {/* <ProductPage/> */}
-      {/* <FullProduct/> */}
-      {/* <Profile/> */}
-      </div>
-      {/* <LoginButton />
-      <LogoutButton/>
-      <Profile /> */}
-      {/* <Home/> */}
-      {/* <Signup/> */}
-      {/* <Signin/> */}
-      {/* <Footer/> */}
+
     </>
   )
 }
