@@ -1,5 +1,5 @@
 const express = require("express")
-const {Kurtha} =require("../Schemas/Productdata")
+const {Kurtha} =require("../Schemas/ProductSchema")
 const route = express.Router()
 
 
