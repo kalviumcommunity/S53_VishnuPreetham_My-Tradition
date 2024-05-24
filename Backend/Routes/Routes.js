@@ -3,7 +3,6 @@ const mongoose=require("mongoose");
 const {Kurtha} =require("../Schemas/ProductSchema")
 const route = express.Router()
 
-
 route.post("/wedding/:model", async (req, res) => {
     const modelName = req.params.model;
     const productData = req.body;
