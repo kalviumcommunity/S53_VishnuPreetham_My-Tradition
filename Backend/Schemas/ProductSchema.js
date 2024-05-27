@@ -43,7 +43,6 @@ const models = {
   Karnataka: mongoose.model('Karnataka', productSchema),
   Maharastra: mongoose.model('Maharastra', productSchema),
   TamilNadu: mongoose.model('TamilNadu', productSchema),
-  Cart: mongoose.model('Cart', cartSchema),
   Kashmiri: mongoose.model('Kashmiri', productSchema),
   Punjabi: mongoose.model('Punjabi', productSchema)
 };
