@@ -1,7 +1,7 @@
 const express = require("express")
 const mongoose=require("mongoose");
 const route = express.Router()
-
+const models=require("../Schemas/ProductSchema")
 route.put("/likes/:model/:userId/:id",async(req,res)=>{
     const id = req.params.id;
     const user_Id=req.params.userId;

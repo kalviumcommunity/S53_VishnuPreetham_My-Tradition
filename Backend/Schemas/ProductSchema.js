@@ -48,22 +48,24 @@ const cartScheema = new Schema({
     fabric: String
   }})
 
-const sareeProd=mongoose.model("sarres",productSchema);
-const Kurtha=mongoose.model("Kurtha",productSchema);
-const Product = mongoose.model('Product', productSchema);
-const Croptop = mongoose.model('Croptop', productSchema);
-const WeddingModern = mongoose.model('WeddingModern', productSchema);
-const Nikkah = mongoose.model('Nikkah', productSchema);
-const Telugu = mongoose.model('TeluguWedding', productSchema);
-const Haldi = mongoose.model('Haldi', productSchema);
-const Bengali = mongoose.model('Bengali', productSchema);
-const AndhraPradesh = mongoose.model('Andhrapradesh', productSchema);
-const Odissa = mongoose.model('Odissa', productSchema);
-const Kerala = mongoose.model('Kerala', productSchema);
-const Karnataka = mongoose.model('Karnatakas', productSchema);
-const Maharastra = mongoose.model('Maharastra', productSchema);
-const TamilNadu = mongoose.model('TamilNadu', productSchema);
-const cart =mongoose.model('cart',cartScheema)
-const kashmiri = mongoose.model('Kashmiri', productSchema);
-const Punjabi = mongoose.model('punjabi', productSchema);
-module.exports = { Product,sareeProd,Kurtha,Croptop,WeddingModern,Nikkah,Telugu,Haldi,Bengali,AndhraPradesh,Odissa,Kerala,Karnataka,Maharastra,TamilNadu,cart,kashmiri,Punjabi};
+  const models = {
+    sareeProd: mongoose.model("sarres", productSchema),
+    Kurtha: mongoose.model("Kurtha", productSchema),
+    Product: mongoose.model('Product', productSchema),
+    Croptop: mongoose.model('Croptop', productSchema),
+    WeddingModern: mongoose.model('WeddingModern', productSchema),
+    Nikkah: mongoose.model('Nikkah', productSchema),
+    Telugu: mongoose.model('TeluguWedding', productSchema),
+    Haldi: mongoose.model('Haldi', productSchema),
+    Bengali: mongoose.model('Bengali', productSchema),
+    AndhraPradesh: mongoose.model('Andhrapradesh', productSchema),
+    Odissa: mongoose.model('Odissa', productSchema),
+    Kerala: mongoose.model('Kerala', productSchema),
+    Karnataka: mongoose.model('Karnatakas', productSchema),
+    Maharastra: mongoose.model('Maharastra', productSchema),
+    TamilNadu: mongoose.model('TamilNadu', productSchema),
+    cart: mongoose.model('cart', cartScheema),
+    Kashmiri: mongoose.model('Kashmiri', productSchema),
+    Punjabi: mongoose.model('punjabi', productSchema)
+};
+module.exports = models
