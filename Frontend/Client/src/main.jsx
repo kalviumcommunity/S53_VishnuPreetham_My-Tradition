@@ -1,10 +1,28 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { Auth0Provider } from '@auth0/auth0-react';
+import App from './App';
+import { BrowserRouter } from "react-router-dom"
+import ParentContext from './Context/ParentContext';
+import { ChakraProvider } from '@chakra-ui/react'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+const root = createRoot(document.getElementById('root'));
+
+root.render(
+  <Auth0Provider
+    domain="dev-sqwbd4wiciu8yg0s.us.auth0.com"
+    clientId="9c3UjDYKtLIW5lyQzoT4ChYmU0uBwmrE"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
+    
+    <BrowserRouter>
+    <ChakraProvider>
+      <ParentContext>
+        <App />
+      </ParentContext>
+      </ChakraProvider>
+    </BrowserRouter>
+  </Auth0Provider>,
+);

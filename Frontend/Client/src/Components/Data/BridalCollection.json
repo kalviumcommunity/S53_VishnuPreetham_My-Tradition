@@ -1,0 +1,163 @@
+[
+    {
+      "product_details": {
+        "description": "Elegant Blue and Silver Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/blue_silver_lehenga.jpg",
+      "price": "18000",
+      "Description": "Elegant Blue and Silver Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this stunning blue and silver bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "Blue and Silver"
+    },
+    {
+      "product_details": {
+        "description": "Traditional Red and Gold Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/red_gold_lehenga.jpg",
+      "price": "15000",
+      "Description": "Traditional Red and Gold Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this stunning red and gold bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "Red and Gold"
+    },
+    {
+      "product_details": {
+        "description": "Vibrant Pink and Green Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/pink_green_lehenga.jpg",
+      "price": "16000",
+      "Description": "Vibrant Pink and Green Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this vibrant pink and green bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "Pink and Green"
+    },
+    {
+      "product_details": {
+        "description": "Regal Purple and Gold Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/purple_gold_lehenga.jpg",
+      "price": "17000",
+      "Description": "Regal Purple and Gold Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this regal purple and gold bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "Purple and Gold"
+    },
+    {
+      "product_details": {
+        "description": "Luxurious Maroon and Cream Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/maroon_cream_lehenga.jpg",
+      "price": "17500",
+      "Description": "Luxurious Maroon and Cream Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this luxurious maroon and cream bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "Maroon and Cream"
+    },
+    {
+      "product_details": {
+        "description": "Exquisite Orange and Gold Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/orange_gold_lehenga.jpg",
+      "price": "16500",
+      "Description": "Exquisite Orange and Gold Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this exquisite orange and gold bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "Orange and Gold"
+    },
+    {
+      "product_details": {
+        "description": "Stunning Turquoise and Silver Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/turquoise_silver_lehenga.jpg",
+      "price": "18500",
+      "Description": "Stunning Turquoise and Silver Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this stunning turquoise and silver bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "Turquoise and Silver"
+    },
+    {
+      "product_details": {
+        "description": "Elegant Black and Gold Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/black_gold_lehenga.jpg",
+      "price": "17000",
+      "Description": "Elegant Black and Gold Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this elegant black and gold bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "Black and Gold"
+    },
+    {
+      "product_details": {
+        "description": "Radiant Yellow and Green Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/yellow_green_lehenga.jpg",
+      "price": "16000",
+      "Description": "Radiant Yellow and Green Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this radiant yellow and green bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "Yellow and Green"
+    },
+    {
+      "product_details": {
+        "description": "Graceful White and Gold Bridal Lehenga",
+        "top_type": "Lehenga",
+        "top_style": "Bridal",
+        "top_pattern": "Solid",
+        "sleeve_detail": null,
+        "fit": null,
+        "fabric": "Silk"
+      },
+      "img": "https://example.com/white_gold_lehenga.jpg",
+      "price": "17500",
+      "Description": "Graceful White and Gold Bridal Lehenga",
+      "Aboutproduct": "Make a statement on your wedding day with this graceful white and gold bridal lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
+      "color": "White and Gold"
+    }
+  ]
+  

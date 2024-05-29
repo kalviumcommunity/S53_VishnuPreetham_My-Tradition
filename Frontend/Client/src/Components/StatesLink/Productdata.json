@@ -1,0 +1,180 @@
+{
+    "states": {
+        "Telangana": {
+            "events": {
+                "TeluguWedding": [
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/17/b5/e9/17b5e9ae38f415e2ca0ea03362c3a481.jpg",
+                        "imgDescription": "Traditional Nichayathartham ceremony with families exchanging gifts and blessings."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/70/02/57/70025736cb9d10d0429845130eab4e64.jpg",
+                        "imgDescription": "Ritualistic ceremony where elders from both families bless the couple."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/19/69/8f/19698f7dce62c26d165111019afc9b25.jpg",
+                        "imgDescription": "Bride and groom exchanging rings as a symbol of their commitment."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/48/5b/f4/485bf4d3afec0d849149cdf4090e3c9e.jpg",
+                        "imgDescription": "Decorative setup for the Nichayathartham ceremony with traditional elements."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/91/8f/45/918f4545d1e7e14e37158402dfcadf83.jpg",
+                        "imgDescription": "Traditional attire worn by the bride and groom during the Nichayathartham ceremony."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/92/84/d7/9284d7aa7c4d3c48de6b1fbdadaebee4.jpg",
+                        "imgDescription": "Decorative items used in the Nichayathartham ceremony symbolizing prosperity and blessings."
+                    },
+                    {
+                        "event_name": "Haldi",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/17/b5/e9/17b5e9ae38f415e2ca0ea03362c3a481.jpg",
+                        "imgDescription": "Traditional Nichayathartham ceremony with families exchanging gifts and blessings."
+                    },
+                    {
+                        "event_name": "Haldi",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/17/b5/e9/17b5e9ae38f415e2ca0ea03362c3a481.jpg",
+                        "imgDescription": "Traditional Nichayathartham ceremony with families exchanging gifts and blessings."
+                    },
+                    {
+                        "event_name": "Haldi",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/17/b5/e9/17b5e9ae38f415e2ca0ea03362c3a481.jpg",
+                        "imgDescription": "Traditional Nichayathartham ceremony with families exchanging gifts and blessings."
+                    },
+                    {
+                        "event_name": "Haldi",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/17/b5/e9/17b5e9ae38f415e2ca0ea03362c3a481.jpg",
+                        "imgDescription": "Traditional Nichayathartham ceremony with families exchanging gifts and blessings."
+                    },
+                    {
+                        "event_name": "Haldi",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/17/b5/e9/17b5e9ae38f415e2ca0ea03362c3a481.jpg",
+                        "imgDescription": "Traditional Nichayathartham ceremony with families exchanging gifts and blessings."
+                    }
+                ],
+                "Lambadi Wedding": [
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/17/b5/e9/17b5e9ae38f415e2ca0ea03362c3a481.jpg",
+                        "imgDescription": "Traditional Nichayathartham ceremony with families exchanging gifts and blessings."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/70/02/57/70025736cb9d10d0429845130eab4e64.jpg",
+                        "imgDescription": "Ritualistic ceremony where elders from both families bless the couple."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/19/69/8f/19698f7dce62c26d165111019afc9b25.jpg",
+                        "imgDescription": "Bride and groom exchanging rings as a symbol of their commitment."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/48/5b/f4/485bf4d3afec0d849149cdf4090e3c9e.jpg",
+                        "imgDescription": "Decorative setup for the Nichayathartham ceremony with traditional elements."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/91/8f/45/918f4545d1e7e14e37158402dfcadf83.jpg",
+                        "imgDescription": "Traditional attire worn by the bride and groom during the Nichayathartham ceremony."
+                    },
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/92/84/d7/9284d7aa7c4d3c48de6b1fbdadaebee4.jpg",
+                        "imgDescription": "Decorative items used in the Nichayathartham ceremony symbolizing prosperity and blessings."
+                    }
+                ]
+            }
+        },
+        "AndhraPradesh": {
+            "events": {
+                "Naidu-Wedding": [
+                    {
+                        "event_name": "Nichayathartham",
+                        "state": "Telangana",
+                        "tradition": "Telugu Wedding",
+                        "cost": "15000",
+                        "stock": "available",
+                        "img": "https://i.pinimg.com/236x/92/84/d7/9284d7aa7c4d3c48de6b1fbdadaebee4.jpg",
+                        "imgDescription": "Decorative items used in the Nichayathartham ceremony symbolizing prosperity and blessings."
+                    }
+                ]
+            }
+        }
+    }
+}
