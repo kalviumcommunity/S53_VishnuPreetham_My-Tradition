@@ -1,0 +1,58 @@
+[
+    {
+        "img":"https://i.pinimg.com/736x/4f/3f/2a/4f3f2a81174a4c2d08a9e2294ff9a00b.jpg",
+        "description":"Sharara Splender",
+        "discount":"Special 10% offer inside",
+        "products":"saree"
+    },
+    {
+        "img":"https://i.pinimg.com/564x/e5/f0/37/e5f0373e6d97a2424f80924aeda41ce6.jpg",
+        "description":"Lenin Sarries",
+        "discount":"Awesome 30% offer",
+        "products":"saree"
+        
+
+    },
+    {
+        "img":"https://i.pinimg.com/564x/b1/95/75/b19575ccf1e1080d356e23c7e7f7cf09.jpg",
+        "description":"Dhothi Dazzle",
+        "discount":"Dashing offers on Dhothi",
+        "products":"dupatta"
+
+    },
+    {
+        "img":"https://i.pinimg.com/564x/d2/49/e0/d249e00c1c32a3242ab90085894f89b6.jpg",
+        "description":"Kurtha Jacket Charm",
+        "discount":"kindle offer's here",
+        "products":"kurtha"
+
+    },
+    {
+        "img":"https://i.pinimg.com/564x/3e/20/f2/3e20f2580eaa01074db97396fc83ba87.jpg",
+        "description":"Classic Crop Top",
+        "discount":"Crazy 20% off inside",
+        "products":"croptop"
+
+    },
+    {
+        "img":"https://i.pinimg.com/564x/ab/90/aa/ab90aa08cfca1d599e6148105e29b581.jpg",
+        "description":"Modern Magics",
+        "discount":"Manginificent 15% magic inside",
+        "products":"weddingmoderndress"
+
+    },
+    {
+        "img":"https://i.pinimg.com/564x/76/9c/a5/769ca5d2fdafe10ddf98a8e178fa3e78.jpg",
+        "description":"Ramdan Remix",
+        "discount":"Special 10% offer inside",
+        "products":"nikkah"
+
+    },
+    {
+        "img":"https://i.pinimg.com/564x/8b/76/e4/8b76e40a839c67ba272b85829078db50.jpg",
+        "description":"Festive Speacial",
+        "discount":"Special 10% offer inside",
+        "products":"festive"
+
+    }
+]
