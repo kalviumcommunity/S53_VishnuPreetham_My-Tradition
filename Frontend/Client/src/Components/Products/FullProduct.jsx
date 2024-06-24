@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TwitterShareButton, FacebookShareButton, TwitterIcon, FacebookIcon, WhatsappShareButton, WhatsappIcon } from 'react-share';
 import './Product.css';
 import { Send } from 'iconsax-react';
@@ -6,31 +6,30 @@ import Navbar from '../Mainpages/Navbar';
 import { ArrowDown2,Heart } from 'iconsax-react';
 import { arrayRemove, arrayUnion, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
-
+import cookies from 'js-cookie'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const FullProduct = () => {
+    const productId=cookies.get("productId");
+    const [product,setProduct]=useState({});
     const [isSharing, setIsSharing] = useState(false);
     const urlToShare = "https://example.com";
     const titleToShare = "Check out this amazing content!";
-    const Product =
-    {
-        "product_details": {
-            "description": "Punjabi Red and Gold Bridal Lehenga",
-            "top_type": "Lehenga",
-            "top_style": "Bridal",
-            "top_pattern": "Solid",
-            "sleeve_detail": null,
-            "fit": null,
-            "fabric": "Silk"
-        },
-        "img": "https://i.pinimg.com/736x/4b/d0/02/4bd0026afd5df63cc27aed8bcf52ca69.jpg",
-        "img2": "https://i.pinimg.com/564x/2c/d3/1b/2cd31b4aa7fa3f5dc7eb10954f6d1ab0.jpg ",
-        "img3": " https://i.pinimg.com/564x/93/e0/00/93e000d03b8dc6b5fdb83df11e00a3c9.jpg",
-        "img4": " https://i.pinimg.com/564x/68/b3/98/68b3980062b246203de1b3c17a66cfee.jpg",
-        "price": "15000",
-        "Description": "Punjabi Red and Gold Bridal Lehenga",
-        "Aboutproduct": "Make a statement on your wedding day with this stunning Punjabi Red and Gold Bridal Lehenga. The intricate embroidery and rich colors exude elegance and tradition.",
-        "color": "Red and Gold"
+    const getProduct=async()=>{
+        try {
+            const model=cookies.get("model");
+            const products=await axios.get(`http://localhost:3000/getOneProduct/${model}/${productId}`)
+            setProduct(products.data)
+            // console.log(products.data.product_details.description)
+            console.log(product.product_details.description);
+        } catch (error) {
+            console.log(error);
+        }
     }
+    const navigate=useNavigate();
+    useEffect(()=>{
+        getProduct()
+    })
     const handleCart = async (product) => {
         try {
             const userRef = doc(db, 'users', user.uid);
@@ -62,12 +61,12 @@ const FullProduct = () => {
             <div className="singleproduct">
                 <div className="productimg">
                     <div className="Similarproducts">
-                        <img src={Product.img2} alt="" />
+                        {/* <img src={Product.img2} alt="" />
                         <img src={Product.img3} alt="" />
-                        <img src={Product.img4} alt="" />
+                        <img src={Product.img4} alt="" /> */}
                     </div>
                     <div className="mainimg">
-                        <img src={Product.img} alt="" />
+                        <img src={product.img} alt="" />
                     </div>
                 </div>
                 <div className="productdescription">
@@ -109,14 +108,14 @@ const FullProduct = () => {
                         </div>
                     </div>
                     <div className="productdetails">
-                        <h2>{Product.product_details.description}</h2>
-                        <p className='AboutProduct'>{Product.Aboutproduct}</p>
+                        {/* <h2>{product.product_details.description}</h2> */}
+                        <p className='AboutProduct'>{product.Aboutproduct}</p>
                         <div className="Price">
-                            <p className='price'>₹ Price-{Product.price}</p>
-                            <p className='offer'>20% OFF&nbsp;<strong> ₹ {Product.price - (Product.price * 20 / 100)}</strong> </p>
+                            <p className='price'>₹ Price-{product.price}</p>
+                            <p className='offer'>20% OFF&nbsp;<strong> ₹ {product.price - (product.price * 20 / 100)}</strong> </p>
                         </div>
                         <button className="AddtoCart">Add To Cart</button>
-                        <button className="Buynow">Buy Now</button>
+                        <button className="Buynow" onClick={()=>{navigate('/payment')}}>Buy Now</button>
                         <p className='NoExchangeandNoReturn'>No Exchange <br /> No Return </p>
                     </div>
                 </div>
@@ -125,11 +124,11 @@ const FullProduct = () => {
                 <div className="dropdown-btn" onClick={toggleDetails}><p>Product Details </p>
                     <ArrowDown2 className={`ArrowDown ${showDetails ? 'show' : ''}`} size="32" color="#FF8A65" /></div>
                 <div className="dropdown-content">
-                    <h2>Description: Punjabi Red and Gold Bridal Lehenga</h2>
-                    <p>Top Type: Lehenga</p>
-                    <p>Top Style: Bridal</p>
-                    <p>Top Pattern: Solid</p>
-                    <p>Fabric: Silk</p>
+                 {/* <h2>{product.product_details.description}</h2> 
+                    <p>{product.product_details.top_type}</p>
+                    <p>{product.product_details.top_style}</p>
+                    <p>{product.product_details.top_pattern}</p>
+                    <p>{product.product_details.sleeve_detail}</p> */}
                 </div>
             </div>
         </div>

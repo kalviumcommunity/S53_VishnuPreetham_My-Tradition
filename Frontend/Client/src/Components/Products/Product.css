@@ -51,6 +51,7 @@ label{
     display: flex;
     flex-direction: column;
     border: 1px solid #ccc;
+    cursor: pointer;
     border-radius: 5px;
     width: calc(33.33% - 20px); /* Adjust based on the number of columns you want */
     max-width: 300px; /* Limit maximum width */

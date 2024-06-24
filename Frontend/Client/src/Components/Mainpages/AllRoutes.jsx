@@ -9,6 +9,8 @@ import Signin from '../../FireBaseLogin/Signin'
 import Signup from '../../FireBaseLogin/Signup'
 import Wishlist from './Wishlist'
 import Order from '../UserData/Order'
+import FullProduct from '../Products/FullProduct'
+import Payment from '../Products/Payment'
 const AllRoutes = () => {
   return (
     <div>
@@ -20,7 +22,9 @@ const AllRoutes = () => {
         <Route path='signin' element={<Signin/>}/>
         <Route path='signup' element={<Signup/>}/>
         <Route path='products_page' element={<Products/>}/>
+        <Route path='fullProduct' element={<FullProduct/>}/>
         <Route path='myOrders' element={<Order/>}/>
+        <Route path='payment' element={<Payment/>}/>
       </Routes>
     </div>
   )
