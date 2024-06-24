@@ -10,9 +10,15 @@ import { arrayRemove, arrayUnion, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
 import { Heart } from 'iconsax-react';
 import { AppContext } from '../../Context/ParentContext';
+// import { setCookie } from './Cookie';
+import { setModel, setUidCookie } from './Cookie.js';
+import cookies from "js-cookie";
+import {useNavigate} from "react-router-dom"
+// import { useNavigate } from 'react-router-dom';
 
 
 export default function ProductPage() {
+
     const { isOpen, onClose, onOpen, isclose } = useDisclosure();
     return (
         <>
@@ -55,9 +61,17 @@ const SidebarContent = ({ ...props }) => {
         },
 
     };
+
     const handleSliderChange = (value) => {
         setRange(value);
     };
+    const changeModel = (event) => {
+        const currentModel = event.target.value;
+        // setModel(currentModel); 
+        setModel(currentModel);
+        // console.log(model);
+    }
+    // console.log(model)
     return (
         <Box
             as="nav"
@@ -80,51 +94,51 @@ const SidebarContent = ({ ...props }) => {
                     <div className={"sidebar"}>
                         <p> Choose your Fest </p>
                         <div className="prodctscatogory">
-                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="Haldi" /> Haldi</label><br />
-                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="Wedding" /> Wedding</label><br />
-                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="Engagement" /> Engagement</label><br />
-                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="Party" /> Party</label><br />
-                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="Festival" /> Festival</label><br />
+                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="Haldi" onChange={changeModel} /> Haldi</label><br />
+                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="WeddingModern" onChange={changeModel} /> Wedding</label><br />
+                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="Kurtha" onChange={changeModel} /> Engagement</label><br />
+                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="Croptop" onChange={changeModel} /> Party</label><br />
+                            <label><input style={{ accentColor: "#A21434" }} type="radio" name="category" value="Festival" onChange={changeModel} /> Festival</label><br />
                         </div>
                         <p> Choose your Tradition</p>
                         <div className="states">
                             <label>
-                                <input type="checkbox" value="Andhra Pradesh" />
+                                <input type="radio" name="category" value="AndhraPradesh" onChange={changeModel} />
                                 Andhra Pradesh
                             </label><br />
                             <label>
-                                <input type="checkbox" value="Telangana" />
+                                <input type="radio" name="category" value="TeluguWedding" onChange={changeModel} />
                                 Telangana
                             </label><br />
                             <label>
-                                <input type="checkbox" value="Tamil Nadu" />
+                                <input type="radio" name="category" value="TamilNadu" onChange={changeModel} />
                                 Tamil Nadu
                             </label><br />
                             <label>
-                                <input type="checkbox" value="Karnataka" />
+                                <input type="radio" name="category" value="Karnataka" onChange={changeModel} />
                                 Karnataka
                             </label><br />
                             <label>
-                                <input type="checkbox" value="Pujabi" />
+                                <input type="radio" name="category" value="Punjabi" onChange={changeModel} />
                                 Pujabi
                             </label><br />
                             {/* <label htmlFor=""></label> */}
                             <label>
-                                <input type="checkbox" value="Kashmiri" />
+                                <input type="radio" name="category" value="Kashmiri" onChange={changeModel} />
                                 Kashmiri
                             </label><br /><label>
-                                <input type="checkbox" value="Maharastra" />
+                                <input type="radio" name="category" value="Maharastra" onChange={changeModel} />
                                 Maharastra
                             </label><br /><label>
-                                <input type="checkbox" value="Kerala" />
+                                <input type="radio" name="category" value="Kerala" onChange={changeModel} />
                                 Kerala
                             </label><br />
                             <label>
-                                <input type="checkbox" value="Bengali" />
+                                <input type="radio" name="category" value="Bengali" onChange={changeModel} />
                                 Bengali
                             </label><br />
                             <label>
-                                <input type="checkbox" value="Odissa" />
+                                <input type="radio" name="category" value="Odissa" onChange={changeModel} />
                                 Odissa
                             </label><br />
                         </div>
@@ -153,10 +167,19 @@ const SidebarContent = ({ ...props }) => {
     )
 }
 const Products = () => {
+    const navigate=useNavigate();
+    const Model = cookies.get("model")
     const [products, setproducts] = useState([]);
-    const {user} = useContext(AppContext);
+    const { user } = useContext(AppContext);
     // const [product,setProduct]=useState({})
-    const [added,setAdded]=useState(false)
+    const setProductUid = (productUid) => {
+        // console.log(productUid)
+        setUidCookie(productUid)
+        const puid = cookies.get("productId");
+        navigate('/fullproduct')
+        // console.log("puid",puid);
+    }
+    const [added, setAdded] = useState(false)
     const handleWishlist = async (product) => {
         try {
             const userRef = doc(db, 'users', user.uid);
@@ -174,8 +197,11 @@ const Products = () => {
             console.error("Error handling wishlist:", error);
         }
     }
+    // const getFullProduct=(id,model)=>{
+    //     setCookie(id,model)
+    // }
     const fetchData = () => {
-        axios.get("http://localhost:3000/Bengali").then((res) => {
+        axios.get(`http://localhost:3000/getProducts/${Model}`).then((res) => {
             // console.log(res.data)
             setproducts(res.data)
         }).catch((err) => { console.log(err) })
@@ -185,14 +211,14 @@ const Products = () => {
         <>
             <div className='products'>
                 {products.map((product, i) => (
-                    <div className='product-card' key={i}>
-
+                    <div className='product-card' key={i} onClick={() => { setProductUid(product._id) }}>
                         <Heart onClick={() => { handleWishlist(product) }} className='Heart' size="32" color="#ebc5a1" />
 
                         <img src={product.img} alt={product.product_details.description} className='product-image' />
-                        <div className='product-details'>
+                        <div className='product-details' >
                             <p className='product-description'>{product.product_details.description ? product.product_details.description.substring(0, 50).concat('...') : ''}</p>
                             <p className='product-price'>Price: ₹{product.price}</p>
+                            <button >Get Full Product</button>
                         </div>
                         <hr />
                     </div>

@@ -1,0 +1,78 @@
+.App {
+    text-align: center;
+  }
+  
+  .productBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+  }
+  
+  .productBox img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .productDetail {
+    text-align: left;
+    margin-top: 16px;
+  }
+  
+  .productDetail h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  
+  .price, .offer {
+    font-size: 16px;
+    margin: 4px 0;
+  }
+  
+  .offer {
+    color: #e74c3c;
+  }
+  
+  .counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .counter-button {
+    background-color: #61dafb;
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 4px;
+  }
+  
+  .counter-button:hover {
+    background-color: #21a1f1;
+  }
+  
+  .counter-count {
+    font-size: 24px;
+    margin: 0 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .productBox {
+      max-width: 90%;
+    }
+  }
+  

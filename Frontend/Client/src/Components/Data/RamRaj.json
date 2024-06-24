@@ -1,0 +1,162 @@
+[
+  {
+    "product_details": {
+      "description": "Classic White Kurta with Churidar",
+      "top_type": "Kurta",
+      "top_style": "Traditional",
+      "top_pattern": "Solid",
+      "sleeve_detail": "Long Sleeves",
+      "fit": "Regular",
+      "fabric": "Cotton"
+    },
+    "img": "https://example.com/white_kurta_churidar.jpg",
+    "price": "2500",
+    "Description": "Classic White Kurta with Churidar",
+    "Aboutproduct": "A timeless white kurta paired with a comfortable churidar, perfect for traditional occasions and festivities.",
+    "color": "White"
+  },
+  {
+    "product_details": {
+      "description": "Elegant Beige Sherwani",
+      "top_type": "Sherwani",
+      "top_style": "Formal",
+      "top_pattern": "Embroidered",
+      "sleeve_detail": "Long Sleeves",
+      "fit": "Slim",
+      "fabric": "Cotton Silk"
+    },
+    "img": "https://example.com/beige_sherwani.jpg",
+    "price": "15000",
+    "Description": "Elegant Beige Sherwani",
+    "Aboutproduct": "An elegant beige sherwani with intricate embroidery, ideal for weddings and special occasions.",
+    "color": "Beige"
+  },
+  {
+    "product_details": {
+      "description": "Casual Blue Linen Shirt",
+      "top_type": "Shirt",
+      "top_style": "Casual",
+      "top_pattern": "Solid",
+      "sleeve_detail": "Short Sleeves",
+      "fit": "Slim",
+      "fabric": "Linen"
+    },
+    "img": "https://example.com/blue_linen_shirt.jpg",
+    "price": "1800",
+    "Description": "Casual Blue Linen Shirt",
+    "Aboutproduct": "A comfortable and stylish blue linen shirt, perfect for casual outings.",
+    "color": "Blue"
+  },
+  {
+    "product_details": {
+      "description": "Formal Black Blazer",
+      "top_type": "Blazer",
+      "top_style": "Formal",
+      "top_pattern": "Solid",
+      "sleeve_detail": "Long Sleeves",
+      "fit": "Slim",
+      "fabric": "Cotton"
+    },
+    "img": "https://example.com/black_blazer.jpg",
+    "price": "5000",
+    "Description": "Formal Black Blazer",
+    "Aboutproduct": "A sleek black blazer that adds a touch of sophistication to any formal attire.",
+    "color": "Black"
+  },
+  {
+    "product_details": {
+      "description": "Traditional Yellow Dhoti",
+      "top_type": "Dhoti",
+      "top_style": "Traditional",
+      "top_pattern": "Solid",
+      "sleeve_detail": null,
+      "fit": "Regular",
+      "fabric": "Cotton"
+    },
+    "img": "https://example.com/yellow_dhoti.jpg",
+    "price": "1200",
+    "Description": "Traditional Yellow Dhoti",
+    "Aboutproduct": "A traditional yellow dhoti made from high-quality cotton, perfect for festivals and ceremonies.",
+    "color": "Yellow"
+  },
+  {
+    "product_details": {
+      "description": "Classic White Veshti",
+      "top_type": "Veshti",
+      "top_style": "Traditional",
+      "top_pattern": "Solid",
+      "sleeve_detail": null,
+      "fit": "Regular",
+      "fabric": "Cotton"
+    },
+    "img": "https://example.com/white_veshti.jpg",
+    "price": "800",
+    "Description": "Classic White Veshti",
+    "Aboutproduct": "A classic white veshti, a traditional garment for men, made from premium cotton.",
+    "color": "White"
+  },
+  {
+    "product_details": {
+      "description": "Formal Grey Trousers",
+      "top_type": "Trousers",
+      "top_style": "Formal",
+      "top_pattern": "Solid",
+      "sleeve_detail": null,
+      "fit": "Slim",
+      "fabric": "Cotton"
+    },
+    "img": "https://example.com/grey_trousers.jpg",
+    "price": "2200",
+    "Description": "Formal Grey Trousers",
+    "Aboutproduct": "A pair of sleek grey trousers, perfect for office wear or formal events.",
+    "color": "Grey"
+  },
+  {
+    "product_details": {
+      "description": "Casual Green Polo Shirt",
+      "top_type": "Polo Shirt",
+      "top_style": "Casual",
+      "top_pattern": "Solid",
+      "sleeve_detail": "Short Sleeves",
+      "fit": "Regular",
+      "fabric": "Cotton"
+    },
+    "img": "https://example.com/green_polo_shirt.jpg",
+    "price": "1500",
+    "Description": "Casual Green Polo Shirt",
+    "Aboutproduct": "A comfortable green polo shirt, great for casual outings and sports activities.",
+    "color": "Green"
+  },
+  {
+    "product_details": {
+      "description": "Elegant White Nehru Jacket",
+      "top_type": "Nehru Jacket",
+      "top_style": "Formal",
+      "top_pattern": "Solid",
+      "sleeve_detail": "Sleeveless",
+      "fit": "Regular",
+      "fabric": "Cotton"
+    },
+    "img": "https://example.com/white_nehru_jacket.jpg",
+    "price": "3000",
+    "Description": "Elegant White Nehru Jacket",
+    "Aboutproduct": "An elegant white Nehru jacket, perfect for layering over traditional or formal wear.",
+    "color": "White"
+  },
+  {
+    "product_details": {
+      "description": "Comfortable Black Joggers",
+      "top_type": "Joggers",
+      "top_style": "Casual",
+      "top_pattern": "Solid",
+      "sleeve_detail": null,
+      "fit": "Regular",
+      "fabric": "Cotton"
+    },
+    "img": "https://example.com/black_joggers.jpg",
+    "price": "1300",
+    "Description": "Comfortable Black Joggers",
+    "Aboutproduct": "Comfortable and stylish black joggers, ideal for workouts and casual wear.",
+    "color": "Black"
+  }
+]

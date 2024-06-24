@@ -44,7 +44,8 @@ const models = {
   Maharastra: mongoose.model('Maharastra', productSchema),
   TamilNadu: mongoose.model('TamilNadu', productSchema),
   Kashmiri: mongoose.model('Kashmiri', productSchema),
-  Punjabi: mongoose.model('Punjabi', productSchema)
+  Punjabi: mongoose.model('Punjabi', productSchema),
+  RamRajCottons:mongoose.model('RamRaj',productSchema)
 };
 
 module.exports = models;
