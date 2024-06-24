@@ -23,7 +23,7 @@ const Payment = () => {
     const getProduct = async () => {
         try {
             const model = cookies.get("model");
-            const products = await axios.get(`http://localhost:3000/getOneProduct/${model}/${productId}`)
+            const products = await axios.get(`https://s53-vishnupreetham-my-tradition.onrender.com/getOneProduct/${model}/${productId}`)
             setProduct(products.data)
             // console.log(products.data.product_details.description)
             // console.log(product.product_details.description);

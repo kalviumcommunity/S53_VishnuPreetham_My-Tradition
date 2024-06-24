@@ -201,7 +201,7 @@ const Products = () => {
     //     setCookie(id,model)
     // }
     const fetchData = () => {
-        axios.get(`http://localhost:3000/getProducts/${Model}`).then((res) => {
+        axios.get(`https://s53-vishnupreetham-my-tradition.onrender.com/getProducts/${Model}`).then((res) => {
             // console.log(res.data)
             setproducts(res.data)
         }).catch((err) => { console.log(err) })
