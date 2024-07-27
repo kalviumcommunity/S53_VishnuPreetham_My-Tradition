@@ -108,7 +108,7 @@ const FullProduct = () => {
                         </div>
                     </div>
                     <div className="productdetails">
-                        {/* <h2>{product.product_details.description}</h2> */}
+                        <h2>{product.Description}</h2>
                         <p className='AboutProduct'>{product.Aboutproduct}</p>
                         <div className="Price">
                             <p className='price'>₹ Price-{product.price}</p>

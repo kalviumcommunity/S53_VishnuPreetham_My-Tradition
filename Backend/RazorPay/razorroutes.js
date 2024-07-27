@@ -7,8 +7,8 @@ const Payment =require("./razorpayschema");
 require("dotenv").config();
 
 const instance = new razorpay({
-    key_id: 'your_key_id_here',
-    key_secret: 'your_key_secret_here'
+    key_id: 'rzp_test_RN0AamryQ1aDZq',
+    key_secret: 'aTPYo2OMNeI16aYf8DpW4w5x'
 })
 
 
@@ -24,22 +24,24 @@ router.post("/checkout",async(req,res)=>{
 
 })
 
-// payemnt verification
-router.post("/paymentverification",async(req,res)=>{
-   const {razorpay_order_id,razorpay_payment_id,razorpay_signature}=req.body;
-   const body = razorpay_order_id + "|" +razorpay_payment_id;
-   const expectedsgnature =crypto.createHmac('sha256',process.env.SECRET).update(body.toString()).digest('hex')
-   const isauth = expectedsgnature === razorpay_signature;
-   if(isauth){
-    await Payment.create({
-        razorpay_order_id,razorpay_payment_id,razorpay_signature 
-    })
-    res.send({message:"success"});
-   }
-   else{
-    res.status(400).json({success:false});
-   }
-})
+router.post("/paymentverification", async (req, res) => {
+    const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = req.body;
+    const body = razorpay_order_id + "|" + razorpay_payment_id;
+    const expectedSignature = crypto.createHmac('sha256', "aTPYo2OMNeI16aYf8DpW4w5x").update(body.toString()).digest('hex');
+    const isAuth = expectedSignature === razorpay_signature;
+  
+    if (isAuth) {
+      await Payment.create({
+        razorpay_order_id,
+        razorpay_payment_id,
+        razorpay_signature
+      });
+  
+      res.redirect(`http://localhost:5173/paymentSuccess?reference=${razorpay_payment_id}`);
+    } else {
+      res.status(400).json({ success: false });
+    }
+  });
 
 router.get("/api/getkey",(req,res)=>{
     return res.status(200).json({key:process.env.KEY})

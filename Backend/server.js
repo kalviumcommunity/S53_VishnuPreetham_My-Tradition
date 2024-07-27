@@ -4,13 +4,15 @@ const cors=require("cors")
 const route=require("./Routes/Routes.js")
 const databaseconnection=require("./db")
 const razorrouter=require("./RazorPay/razorroutes")
+const bodyParser = require('body-parser');
 
 require("dotenv").config()
 databaseconnection()
 /////Middlewares Config.
 
-app.use(express.json())
 app.use(cors())
+app.use(bodyParser());
+app.use(express.json())
 app.use(razorrouter)
 app.use(route)
 

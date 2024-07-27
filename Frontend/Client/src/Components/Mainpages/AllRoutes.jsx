@@ -11,6 +11,7 @@ import Wishlist from './Wishlist'
 import Order from '../UserData/Order'
 import FullProduct from '../Products/FullProduct'
 import Payment from '../Products/Payment'
+import Paymentsuccess from '../Products/Paymentsuccess'
 const AllRoutes = () => {
   return (
     <div>
@@ -25,6 +26,7 @@ const AllRoutes = () => {
         <Route path='fullProduct' element={<FullProduct/>}/>
         <Route path='myOrders' element={<Order/>}/>
         <Route path='payment' element={<Payment/>}/>
+        <Route path='paymentSuccess' element={<Paymentsuccess/>}/>
       </Routes>
     </div>
   )
