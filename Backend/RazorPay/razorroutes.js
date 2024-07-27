@@ -37,7 +37,7 @@ router.post("/paymentverification", async (req, res) => {
         razorpay_signature
       });
   
-      res.redirect(`http://localhost:5173/paymentSuccess?reference=${razorpay_payment_id}`);
+      res.redirect(`https://client-b-vishnu-preethams-projects.vercel.app/paymentSuccess?reference=${razorpay_payment_id}`);
     } else {
       res.status(400).json({ success: false });
     }
