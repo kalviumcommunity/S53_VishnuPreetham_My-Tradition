@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Box, VStack, Drawer, DrawerContent, IconButton, useDisclosure, DrawerOverlay, useColorModeValue } from '@chakra-ui/react';
 import { FiMenu } from 'react-icons/fi';
 import "./Product.css"
@@ -10,14 +10,13 @@ import { arrayRemove, arrayUnion, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
 import { Heart } from 'iconsax-react';
 import { AppContext } from '../../Context/ParentContext';
-// import { setCookie } from './Cookie';
 import { setModel, setUidCookie } from './Cookie.js';
 import cookies from "js-cookie";
 import {useNavigate} from "react-router-dom"
-// import { useNavigate } from 'react-router-dom';
 
 
-export default function ProductPage() {
+
+const ProductPage=()=> {
 
     const { isOpen, onClose, onOpen, isclose } = useDisclosure();
     return (
@@ -67,11 +66,8 @@ const SidebarContent = ({ ...props }) => {
     };
     const changeModel = (event) => {
         const currentModel = event.target.value;
-        // setModel(currentModel); 
         setModel(currentModel);
-        // console.log(model);
     }
-    // console.log(model)
     return (
         <Box
             as="nav"
@@ -90,7 +86,6 @@ const SidebarContent = ({ ...props }) => {
         >
             <VStack h="full" w="full" alignItems="flex-start" justifyContent="space-between">
                 <div className='Productspage'>
-                    {/* <HambergerMenu className='menu' size="32" color="#F8EAD1" onClick={openMenu} /> */}
                     <div className={"sidebar"}>
                         <p> Choose your Fest </p>
                         <div className="prodctscatogory">
@@ -171,15 +166,13 @@ const Products = () => {
     const Model = cookies.get("model")
     const [products, setproducts] = useState([]);
     const { user } = useContext(AppContext);
-    // const [product,setProduct]=useState({})
     const setProductUid = (productUid) => {
-        // console.log(productUid)
         setUidCookie(productUid)
         const puid = cookies.get("productId");
         navigate('/fullproduct')
-        // console.log("puid",puid);
     }
     const [added, setAdded] = useState(false)
+
     const handleWishlist = async (product) => {
         try {
             const userRef = doc(db, 'users', user.uid);
@@ -197,16 +190,17 @@ const Products = () => {
             console.error("Error handling wishlist:", error);
         }
     }
-    // const getFullProduct=(id,model)=>{
-    //     setCookie(id,model)
-    // }
+
     const fetchData = () => {
         axios.get(`https://s53-vishnupreetham-my-tradition.onrender.com/getProducts/${Model}`).then((res) => {
             // console.log(res.data)
             setproducts(res.data)
         }).catch((err) => { console.log(err) })
     }
-    fetchData();
+    useEffect(()=>{
+        fetchData();
+    })
+    
     return (
         <>
             <div className='products'>
@@ -227,3 +221,4 @@ const Products = () => {
         </>
     )
 }
+export {ProductPage,SidebarContent,Products} ;

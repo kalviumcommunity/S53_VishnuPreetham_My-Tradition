@@ -77,7 +77,7 @@ const Signup = () => {
             <input class="form-input" placeholder='Please Set your password' type="password" id="password" {...register('password', { required: true })} />
             {errors.password && <span class="error-message">This field is required</span>}
           </div>
-          <Link to="signin"><p>User Already Exsits ?</p></Link>
+          <p onClick={()=>navigate("/signin")}>User Already Exsits ?</p>
           <button class="submit-button" type="submit">Submit</button>
         </form>
       </div>
