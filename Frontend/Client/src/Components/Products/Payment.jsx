@@ -46,7 +46,7 @@ const Payment = () => {
         description: `${description}`,
         image: `{${logo}}`,
         order_id: order.id,
-        callback_url:"https://s53-vishnupreetham-my-tradition.onrender.com/paymentverification",
+        callback_url:"http://localhost:5173/paymentSuccess",
         profile: {
           name: `${user.name}`,
           email: `${user.email}`,

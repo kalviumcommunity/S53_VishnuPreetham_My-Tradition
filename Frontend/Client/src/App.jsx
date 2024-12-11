@@ -1,16 +1,15 @@
 import AllRoutes from './Components/Mainpages/AllRoutes'
-import FullProduct from './Components/Products/FullProduct';
-import Payment from './Components/Products/Payment';
-import ProductPage from './Components/Products/Products';
+
+import LaunchingPage from './Components/Products/Launching';
+
 
 function App() {
   return (
     <>
 
       <AllRoutes/>
-      {/* <Payment/> */}
-      {/* <FullProduct></FullProduct> */}
-      {/* <ProductPage></ProductPage> */}
+      {/* <LaunchingPage/> */}
+
 
     </>
   )

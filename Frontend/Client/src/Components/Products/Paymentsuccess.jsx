@@ -1,22 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Lottie from "react-lottie";
-import animationSuccess from "../../Assets/Animation - 1721981380336.json"
+import animationSuccess from "../../Assets/Animation - 1721981380336.json";
+import OrderConfirmation from "./OrderConfirmed";
+
 const Paymentsuccess = () => {
+  const [page, setPage] = useState(false);
+
+
   const Animation = {
-    loop: true,
+    loop: false, 
     autoplay: true,
     animationData: animationSuccess,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setPage(true); 
+    }, 3); 
+
+    return () => clearTimeout(timer); 
+  }, []);
+
   return (
     <div>
-      <div className="lottiesanimation">
-        <Lottie options={Animation} height={200} width={200} />
-      </div>
+      
+        <OrderConfirmation />
+      {/* )} */}
     </div>
   );
 };
-
 export default Paymentsuccess;
