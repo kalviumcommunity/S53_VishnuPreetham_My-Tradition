@@ -46,7 +46,7 @@ const Payment = () => {
         description: `${description}`,
         image: `{${logo}}`,
         order_id: order.id,
-        callback_url:"http://localhost:5173/paymentSuccess",
+        callback_url:"https://mytradition.vercel.app/paymentSuccess",
         profile: {
           name: `${user.name}`,
           email: `${user.email}`,

@@ -23,10 +23,11 @@ const Navbar = () => {
                         <p>WOMEN</p>
                         <p>MEN</p>
                         <p>BRIDAL</p>
-                        <p>FESTIVAL</p>
+                        <p >FESTIVAL</p>
                     </div>
                     <div
                         className="Logo"
+                        onClick={()=>{navigate("/")}}
                         style={{
                             height: '100%',
                             textAlign: 'center',
