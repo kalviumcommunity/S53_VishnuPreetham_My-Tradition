@@ -6,6 +6,10 @@ Title:                **My-Tradition**
 **Day-1** Creating the Repository,Low design , And creating the server page and the database connections .
 **Day-2** Creating the Frontend Background and the landing page of my App. Connecting the login with the google authentication.  
 **Day-3** Describing the routes and connecting the roots. Render Deployment ,Vercel deployment .
+Customer App:
+https://mytradition.vercel.app
 
-**RenderLink**:https://s53-vishnupreetham-my-tradition.onrender.com
-**Vercel Deployed Link(Frontend Part)**:https://mytradition.vercel.app/
+After placing an order, delivery partners can view and manage order details through a separate logistics dashboard:
+
+Delivery Dashboard:
+https://ultra-fast-logistics.vercel.app
